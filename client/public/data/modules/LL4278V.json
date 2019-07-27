@@ -1,0 +1,22 @@
+{
+"moduleCode": "LL4278V",
+"moduleTitle": "Regional Trade and Investment Law",
+"moduleCredit": "5",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite": "NUS Compulsory Core Curriculum or its equivalent",
+"preclusionList": [],
+"parsedPrerequisite" : "nil",
+"prerequisiteList": [],
+"completePrerequisite": {
+            "name": "LL4278V", 
+            "children": []
+},
+"moduleDescription": "This module compares the frameworks for governing trade, investment and movement of persons provided by the world\u2019s four leading regional organisations: ASEAN, the European Union, Mercosur and NAFTA. It has three components. The first looks at the public law of these organisations, their systems of norm-setting and dispute settlement. The second looks at the legal regimes governing trade in goods and services and investment in each. The final section looks at a number of further key sectors and policies: intellectual property, the professions, free movement of persons.",
+"crossModule": "-1",
+"corequisite": "Public International Law: LL4050; LL5050; LL6050; LC5050 / LL4050V; LL5050V; LL6050V; LC5050V",
+"faculty": "LAW",
+"department": "LAW",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[2015,1,0,0,0],[2016,1,0,0,0]]
+}

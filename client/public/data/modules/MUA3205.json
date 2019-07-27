@@ -1,0 +1,29 @@
+{
+"moduleCode": "MUA3205",
+"moduleTitle": "Materials of Jazz Music 1",
+"moduleCredit": "3",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite": "MUT2118 Musical Concepts and Materials IV",
+"preclusionList": [],
+"parsedPrerequisite": {
+" and ": ["MUT2118"]
+},
+"prerequisiteList": ["MUT2118"],
+"completePrerequisite": {
+            "name": "MUA3205", 
+            "children": [
+                {
+                    "name": "MUT2118", 
+                    "children": []
+                }
+            ]
+},
+
+"crossModule": "-1",
+"corequisite": "NIL",
+"faculty": "YONG SIEW TOH CONSERVATORY OF MUSIC",
+"department": "YONG SIEW TOH CONSERVATORY OF MUSIC",
+"history": [[0,0,0,0,0],[2012,1,0,0,0],[2013,1,0,0,0],[2014,1,0,0,0],[2015,1,0,0,0],[2016,1,0,0,0]]
+}

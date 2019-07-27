@@ -1,0 +1,22 @@
+{
+"moduleCode": "NUR5611",
+"moduleTitle": "Clinical Practicum I (Paediatrics) (8 weeks)",
+"moduleCredit": "12",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite" : "NIL",
+"preclusionList": [],
+"parsedPrerequisite" : "nil",
+"prerequisiteList": [],
+"completePrerequisite": {
+            "name": "NUR5611", 
+            "children": []
+},
+"moduleDescription": "The module aims for students to implement advanced practice skills in patient/family assessment, develop and implement a management plan and evaluate the plan\u2019s effectiveness. Care of paediatric patients with approaches to symptoms (SNB developmental milestone for paediatric APN internship) within 3 care settings: - General paediatric medical and/or surgical wards on acute management - Emergency care on triaging/early assessment - Critical care on interventions, resuscitation and stabilization of the critically ill patients. Aspects of health promotion and maintenance appropriate to these patients and families will also be emphasized.",
+"crossModule": "-1",
+"corequisite": "NUR5601 and NUR5602",
+"faculty": "YONG LOO LIN SCHOOL OF MEDICINE",
+"department": "NURSING/ALICE LEE CTR FOR NURSING STUD",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[2015,0,2,0,4],[2016,1,2,0,0]]
+}

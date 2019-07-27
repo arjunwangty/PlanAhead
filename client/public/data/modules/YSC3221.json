@@ -1,0 +1,29 @@
+{
+"moduleCode": "YSC3221",
+"moduleTitle": "Computer Vision",
+"moduleCredit": "5",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite": "YSC1202 Introduction to Computation and Programming for All or permission of instructor",
+"preclusionList": [],
+"parsedPrerequisite": {
+" and ": ["YSC1202"]
+},
+"prerequisiteList": ["YSC1202"],
+"completePrerequisite": {
+            "name": "YSC3221", 
+            "children": [
+                {
+                    "name": "YSC1202", 
+                    "children": []
+                }
+            ]
+},
+"moduleDescription": "The goal of computer vision is to make computers work like human visual perception, namely, to understand and recognize the world through visual information, such as, images or videos. Human visual perception, after millions of years of evolution, is extremely good in understanding and recognizing objects or scenes. To have similar abilities to human visual perception, computer scientists have been developing algorithms by relying on various visual information, and this course is about some of these algorithms. Silhouette-based 3D reconstruction, segmentation, multiview geometry, Bayesian/probabilistic inference for image modelling and analysis, object recognition, visual tracking, photometric stereo, image editing and enhancement.",
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "YALE-NUS COLLEGE",
+"department": "YALE-NUS COLLEGE",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[2015,0,2,0,0],[2016,1,0,0,0]]
+}

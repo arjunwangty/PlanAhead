@@ -1,0 +1,24 @@
+{
+"moduleCode": "ST5225",
+"moduleTitle": "Statistical Analysis of Networks",
+"moduleCredit": "2",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite": "ST2131 Probability",
+"preclusionList": [],
+"parsedPrerequisite": {
+" and ": ["ST2131"]
+},
+"prerequisiteList": [],
+"completePrerequisite": {
+            "name": "ST5241A", 
+            "children": []
+},
+"moduleDescription": "Network data has become increasingly important in both academia and industry. Many interesting questions can be understood and analysed through networks. Applications are found in areas such as sociology (Facebook and Twitter networks), computer science (World Wide Web), and biology (gene and protein interaction networks). With the availability of large network data sets, be it in corporate, governmental or scientific contexts, comes the necessity to work with such data in an appropriate manner. This course gives a practical introduction to the theory of network analysis; topics include statistical network models, descriptive and inferential network analysis, network visualisation.",
+"crossModule": "-1",
+"corequisite": "Basic Statistical Theory",
+"faculty": "SCIENCE",
+"department": "STATISTICS & APPLIED PROBABILITY",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[2015,0,2,0,0],[0,0,0,0,0]]
+}

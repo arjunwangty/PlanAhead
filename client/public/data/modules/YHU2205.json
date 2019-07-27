@@ -1,0 +1,22 @@
+{
+"moduleCode": "YHU2205",
+"moduleTitle": "Integrative Music Theory 1",
+"moduleCredit": "5",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite" : "NIL",
+"preclusionList": [],
+"parsedPrerequisite" : "nil",
+"prerequisiteList": [],
+"completePrerequisite": {
+            "name": "YHU2205", 
+            "children": []
+},
+"moduleDescription": "Integrative Music Theory I is a comprehensive introduction to musicianship and musical understanding. This course is designed to introduce tonal principles basic to the understanding of the Western musical tradition. Students will first develop skills at recognizing contrapuntal textures in two and three parts. As will be seen, these contrapuntal principles are vital to the way even \u2018purely harmonic\u2019 music works. Following from this, lectures will focus on the hierarchical principles that govern the motion and organization of sonorities and students will develop skills at manipulating harmonic textures in four parts.",
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "YALE-NUS COLLEGE",
+"department": "YALE-NUS COLLEGE",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[2014,1,0,0,0],[2015,1,0,0,0],[2016,1,0,0,0]]
+}

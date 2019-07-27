@@ -1,0 +1,46 @@
+{
+"moduleCode": "YSC3207",
+"moduleTitle": "Principles and Tools of Software Development",
+"moduleCredit": "5",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite": "YSC1202 Introduction to Computational Thinking and Programming for All or YSC2204 Fundamentals of Programming or permission of instructor",
+"preclusionList": [],
+"parsedPrerequisite": {
+            " or ": [
+                "YSC1202", 
+                "YSC2204"
+            ]
+},
+"prerequisiteList": ["YSC1202","YSC2204","YCC2133"],
+"completePrerequisite": {
+            "name": "YSC3207", 
+            "children": [
+                {
+                    "name": "or", 
+                    "children": [
+                        {
+                            "name": "YSC1202", 
+                            "children": []
+                        }, 
+                        {
+                            "name": "YSC2204", 
+                            "children": [
+                                {
+                                    "name": "YCC2133", 
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+},
+"moduleDescription": "Only being able to program does not make one a good programmer. This course teaches principles and tools that can make a good software developer. Students will learn basic principles of software development, e.g., encapsulation, information hiding, modularisation, unit/integrated testing, debugging, programming in a team, profiling. They will also learn tools that will help automate these tasks, e.g., Make, version control systems (git), shell scripting, UNIX programming.",
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "YALE-NUS COLLEGE",
+"department": "YALE-NUS COLLEGE",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[2015,1,0,0,0],[2016,1,0,0,0]]
+}

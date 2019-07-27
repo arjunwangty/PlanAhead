@@ -1,0 +1,26 @@
+{
+"moduleCode": "BMF5002",
+"moduleTitle": "Valuation of Mergers and Acquisitions",
+"moduleCredit": "4",
+"lockedModules":[
+],
+"preclusion": "MKT4415C Applied Market Research",
+"prerequisite": "FIN3101 Corporate Finance",
+"preclusionList": [
+            "MKT4415C"
+        ],
+"parsedPrerequisite": {
+" and ": ["FIN3101"]
+},
+"prerequisiteList": [],
+"completePrerequisite": {
+            "name": "BMK5002", 
+            "children": []
+},
+"moduleDescription": "This course surveys the financial methods used in mergers and acquisitions, buyouts and corporate restructurings. We will examine the process of evaluating opportunities in the corporate-control market; analyse how deal structure affects both value creation and value division; investigate M&A motivations and tactics; consider M&A valuation of stand-alone firms, merged firm synergies, transaction contingent clauses and the expected impact on share value and earnings accretion/dilution; and assess the valuation and structuring of leveraged buyouts and the recapitalization and restructuring of troubled firms. Major M&A constituents, such as private equity and hedge fund groups are also considered.",
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "SCHOOL OF BUSINESS",
+"department": "FINANCE",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[2013,0,2,0,0],[0,0,0,0,0],[2015,0,2,0,0],[0,0,0,0,0]]
+}

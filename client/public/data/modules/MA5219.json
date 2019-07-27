@@ -1,0 +1,24 @@
+{
+"moduleCode": "MA5219",
+"moduleTitle": "Logic and Foundation of Mathematics I",
+"moduleCredit": "4",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite": "MA4207 or departmental approval",
+"preclusionList": [],
+"parsedPrerequisite": {
+" and ": ["MA4207"]
+},
+"prerequisiteList": [],
+"completePrerequisite": {
+            "name": "MA5232", 
+            "children": []
+},
+"moduleDescription": "This module is designed for graduate students in mathematics, and students in computer science and philosophy who have sufficient mathematical background. The core of the module is Gdels incompleteness theorem. Before that, some basic knowledge on first order logic, such as compactness theorem and properties of reducts of number theory, will be discussed. After that, some basic topics in Recursion Theory and Model Theory are introduced.",
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "SCIENCE",
+"department": "MATHEMATICS",
+"history": [[0,0,0,0,0],[2012,1,0,0,0],[2013,1,0,0,0],[2014,1,0,0,0],[2015,1,0,0,0],[0,0,0,0,0]]
+}

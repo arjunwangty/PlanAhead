@@ -1,0 +1,42 @@
+{
+"moduleCode": "PC2134",
+"moduleTitle": "Mathematical Mtds In Physics I",
+"moduleCredit": "4",
+"lockedModules":[
+            "PC3130"
+        ],
+"preclusion": "NIL",
+"prerequisite": "MA1101R and MA1102R or equivalent",
+"preclusionList": [],
+"parsedPrerequisite": {
+            " and ": [
+                "MA1101R", 
+                "MA1102R"
+            ]
+},
+"prerequisiteList": ["MA1101R","MA1102R"],
+"completePrerequisite": {
+            "name": "PC2134", 
+            "children": [
+                {
+                    "name": "and", 
+                    "children": [
+                        {
+                            "name": "MA1101R", 
+                            "children": []
+                        }, 
+                        {
+                            "name": "MA1102R", 
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+},
+"moduleDescription": "This module aims to give students the necessary mathematical skills for other physics courses. The topics to be covered include: complex numbers and hyperbolic functions; multivariable calculus; elements of vector calculus; Taylor series; Fourier series, Dirac delta-function, Fourier transforms, Laplace transforms, physical applications; second-order ordinary and partial differential equations, wave equation, diffusion equation, Poisson\u2019s equation; Green\u2019s functions; Sturm-Liouville theory; special functions associated with physical systems, Hermite polynomials, Bessel functions, Legendre functions.",
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "SCIENCE",
+"department": "PHYSICS",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[2015,0,0,3,4],[2016,1,0,0,0]]
+}

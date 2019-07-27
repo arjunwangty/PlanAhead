@@ -1,0 +1,22 @@
+{
+"moduleCode": "LL5259V",
+"moduleTitle": "Law and Practice of Alternative Investments",
+"moduleCredit": "5",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite": "NUS Compulsory Core Law Curriculum or equivalent.",
+"preclusionList": [],
+"parsedPrerequisite" : "nil",
+"prerequisiteList": [],
+"completePrerequisite": {
+            "name": "LL5259V", 
+            "children": []
+},
+"moduleDescription": "This course is designed to provide students with an understanding of the legal issues that arise in alternative investment from both a practical and theoretical perspective. The topics that will be covered include private equity, venture capital, hedge funds, crowdfunding and REITs. The course will discuss selected partnership and corporate issues of alternative investment vehicles. The course will focus on China and will provide relevant comparisons on alternative investment in Singapore, the U.K. and the U.S.",
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "LAW",
+"department": "LAW",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[2014,0,2,0,0],[2015,0,2,0,0],[2016,0,2,0,0]]
+}

@@ -1,0 +1,86 @@
+{
+"moduleCode": "MA4233",
+"moduleTitle": "Dynamical Systems",
+"moduleCredit": "4",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite": "MA3220",
+"preclusionList": [],
+"parsedPrerequisite": {
+" and ": ["MA3220"]
+},
+"prerequisiteList": ["MA3233","MA2214","MA1100","MA1101R","MA1311","MA1506","MA1102R","MA1505","MA1521","MA1508","CS1231","CS1231S"],
+"completePrerequisite": {
+            "name": "MA4235", 
+            "children": [
+                {
+                    "name": "MA3233", 
+                    "children": [
+                        {
+                            "name": "MA2214", 
+                            "children": [
+                                {
+                                    "name": "or", 
+                                    "children": [
+                                        {
+                                            "name": "MA1100", 
+                                            "children": []
+                                        }, 
+                                        {
+                                            "name": "MA1101R", 
+                                            "children": []
+                                        }, 
+                                        {
+                                            "name": "MA1311", 
+                                            "children": []
+                                        }, 
+                                        {
+                                            "name": "MA1506", 
+                                            "children": [
+                                                {
+                                                    "name": "or", 
+                                                    "children": [
+                                                        {
+                                                            "name": "MA1102R", 
+                                                            "children": []
+                                                        }, 
+                                                        {
+                                                            "name": "MA1505", 
+                                                            "children": []
+                                                        }, 
+                                                        {
+                                                            "name": "MA1521", 
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "name": "MA1508", 
+                                            "children": []
+                                        }, 
+                                        {
+                                            "name": "CS1231", 
+                                            "children": []
+                                        }, 
+                                        {
+                                            "name": "CS1231S", 
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+},
+"moduleDescription": "The theory of dynamical systems studies the long-term behaviour of evolving systems. The aim of the module is to introduce fundamental elements of the mathematical theory of dynamical systems, understand nonlinear phenomena including chaos and bifurcation, and illustrate some of the most important ideas and methods to analyze nonlinear systems. Major topics: dynamics of circle maps, structural stability; dynamics of interval maps, symbolic dynamics and chaos, kneading sequence; bifurcation theory for one-dimensional maps; examples of higher dimensional dynamics.",
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "SCIENCE",
+"department": "MATHEMATICS",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[2014,0,2,0,0],[2015,0,2,0,0],[0,0,0,0,0]]
+}

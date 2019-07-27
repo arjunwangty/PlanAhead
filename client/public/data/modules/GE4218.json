@@ -1,0 +1,22 @@
+{
+"moduleCode": "GE4218",
+"moduleTitle": "Interpreting Tourism Spaces and Cultures",
+"moduleCredit": "5",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite": "Cohort 2011 and before: Completed 80 MCs, including 28 MCs in GE, with a minimum CAP of 3.50 or be on the Honours track. Cohort 2012 onwards: Completed 80 MCs, including 28 MCs in GE, with a minimum CAP of 3.20 or be on the Honours track.",
+"preclusionList": [],
+"parsedPrerequisite" : "nil",
+"prerequisiteList": [],
+"completePrerequisite": {
+            "name": "GE4218", 
+            "children": []
+},
+"moduleDescription": "The recent decades has seen a rise in concern over the ills of tourism, and an attendant shift towards forms of tourism that is considered 'alternative', 'sustainable', or 'responsible'. Central to such rhetoric is the idea that tourism can and should consider ethics, morals, and responsibility. This module intends to critically analyze these contemporary shifts towards the responsible tourism, and its implications on society and space. On a broader level, it posits important questions on what is leisure, recreation, and enjoyment, in a time when increasing calls are made towards acknowledging the implicit moralities in all aspects of life.",
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "ARTS & SOCIAL SCIENCES",
+"department": "GEOGRAPHY",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[2013,0,2,0,0],[2014,0,2,0,0],[2015,1,0,0,0],[2016,1,0,0,0]]
+}

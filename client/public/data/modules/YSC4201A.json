@@ -1,0 +1,27 @@
+{
+"moduleCode": "YSC4201A",
+"moduleTitle": "Topics in Analysis",
+"moduleCredit": "1",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite": "YSC3206 One Real Variable and YSC3205 Linear Algebra, or Permission of Instructor.",
+"preclusionList": [],
+"parsedPrerequisite": {
+            " and ": [
+                "YSC3206", 
+                "YSC3205"
+            ]
+},
+"prerequisiteList": [],
+"completePrerequisite": {
+            "name": "YSH2409", 
+            "children": []
+},
+"moduleDescription": "Advanced topics in analysis, such as Fourier analysis, measure theory, analytic number theory, partial differential equations, and functional analysis. Topics may vary depending on instructor and students.",
+"crossModule": "-1",
+"corequisite": "None.",
+"faculty": "YALE-NUS COLLEGE",
+"department": "YALE-NUS COLLEGE",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[2015,0,2,0,0],[0,0,0,0,0]]
+}

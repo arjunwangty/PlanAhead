@@ -1,0 +1,24 @@
+{
+"moduleCode": "YHU2225",
+"moduleTitle": "Love and Friendship",
+"moduleCredit": "5",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite": "YCC1114 Philosophy and Political Thought 2",
+"preclusionList": [],
+"parsedPrerequisite": {
+" and ": ["YCC1114"]
+},
+"prerequisiteList": [],
+"completePrerequisite": {
+            "name": "YHU2226", 
+            "children": []
+},
+"moduleDescription": "A philosophical examination of some key questions concerning love and friendship. Readings will include classical and contemporary sources, and works from multiple intellectual traditions.",
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "YALE-NUS COLLEGE",
+"department": "YALE-NUS COLLEGE",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[2015,1,0,0,0],[0,0,0,0,0]]
+}

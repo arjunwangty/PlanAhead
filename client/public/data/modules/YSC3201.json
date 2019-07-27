@@ -1,0 +1,22 @@
+{
+"moduleCode": "YSC3201",
+"moduleTitle": "Genetics",
+"moduleCredit": "5",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite" : "NIL",
+"preclusionList": [],
+"parsedPrerequisite" : "nil",
+"prerequisiteList": [],
+"completePrerequisite": {
+            "name": "YSC3201", 
+            "children": []
+},
+"moduleDescription": "This course illustrates basic principles of genetics using examples from prokaryote and eukaryote organisms. It emphasizes classical genetic techniques and how genetics is used to gain understanding of whole organisms. The gene, its context and the genome are the primary concepts covered. The focus will be on Drosophila developmental genetics, yeast cell biology and human disease.",
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "YALE-NUS COLLEGE",
+"department": "YALE-NUS COLLEGE",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[2015,1,0,0,0],[2016,1,0,0,0]]
+}

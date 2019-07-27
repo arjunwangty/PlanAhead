@@ -1,0 +1,19 @@
+{
+    "moduleCode": "ST4248",
+    "moduleTitle": "Statistical Learning II",
+    "moduleCredit": "4",
+    "lockedModules":[
+    ],
+    "preclusion": "ST4240",
+    "prerequisite" : "ST3131 and ST3248",
+    "preclusionList": ["ST4240"],
+    "parsedPrerequisite" : {" and ":["ST3131", "ST3248"]},
+    "prerequisiteList": ["ST3131", "ST3248"],
+    "moduleDescription":"Statistical Learning is a large collection of computer-based modelling and prediction tools with applications in diverse fields including business, medicine, astrophysics, and public policy. This series of two modules covers many of the popular approaches for a variety of statistical problems. There is heavy emphasis on the implementation of these methods on real-world data sets in the popular statistical software package R. Part II builds on the knowledge in Part I, introducing more tools as well as generalising and extending some of the tools covered in Part I using entirely different approaches. Topics include non-parametric smoothing methods, tree-based methods, support vector machines, neural networks and ensemble learning.",
+    "crossModule": "-1",
+    "corequisite": "-1",
+    "faculty": "SCIENCE",
+    "department": "STATISTICS & APPLIED PROBABILITY",
+    "history": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
+    }
+    

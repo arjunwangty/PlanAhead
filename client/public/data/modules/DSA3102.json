@@ -1,0 +1,22 @@
+{
+    "moduleCode": "DSA3102",
+    "moduleTitle": "Essential Data Analytics Tools: Convex Optimisation",
+    "moduleCredit": "4",
+    "lockedModules":[
+    ],
+    "preclusion": "NIL",
+    "prerequisite" : "CS1010/CS1010E/CS1010S/CS1010X and MA1101R and {MA1104 or MA2104 or MA2311}",
+    "preclusionList": [],
+    "parsedPrerequisite" : {" and ":[{" or ":["CS1010", "CS1010E", "CS1010S", "CS1010X"]}, "MA1101R", {" or ":["MA1104","MA2104","MA2311"]}]},
+    "prerequisiteList": [],
+    "completePrerequisite": {
+                "name": "CSA6770", 
+                "children": []
+    },
+    "moduleDescription": "Convex optimisation is an indispensable technique in dealing with high-dimensional structured problems in data science. The module covers modelling examples; basic concepts for convex functions and sub-gradients; gradient and sub-gradient methods; accelerated proximal gradient methods; stochastic block coordinate descent methods; Lagrangian duals; splitting algorithms and implementations.",
+    "crossModule": "-1",
+    "corequisite": "NIL",
+    "faculty": "SCIENCES",
+    "department": "MATHEMATICS",
+    "history": [[0,0,0,0,0],[0,0,0,0,0],[2013,0,2,0,0],[2014,0,2,0,0],[2015,1,2,0,0],[2016,0,2,0,0]]
+    }

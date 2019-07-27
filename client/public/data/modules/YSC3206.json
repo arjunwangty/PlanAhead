@@ -1,0 +1,30 @@
+{
+"moduleCode": "YSC3206",
+"moduleTitle": "One Real Variable",
+"moduleCredit": "5",
+"lockedModules":[
+            "YSC4203"
+        ],
+"preclusion": "NIL",
+"prerequisite": "YSC2209 Proof OR YSC3205 Linear Algebra",
+"preclusionList": [],
+"parsedPrerequisite": {
+" and ": ["YSC3205"]
+},
+"prerequisiteList": ["YSC3205"],
+"completePrerequisite": {
+            "name": "YSC3206", 
+            "children": [
+                {
+                    "name": "YSC3205", 
+                    "children": []
+                }
+            ]
+},
+"moduleDescription": "This course embarks on a deep study of the real numbers and functions of a single real variable. Fundamental properties of real numbers \u2013 arithmetic, distance, limit, convergence, order \u2013 are developed from scratch. From there, the course delves into the inner workings of calculus, the general notions of continuity, differentiability, measure, and integration, for functions of one real variable.",
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "YALE-NUS COLLEGE",
+"department": "YALE-NUS COLLEGE",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[2015,1,0,0,0],[2016,1,0,0,0]]
+}

@@ -1,0 +1,22 @@
+{
+"moduleCode": "LL5267V",
+"moduleTitle": "Architecting Deals: A Framework of Private Orderings",
+"moduleCredit": "5",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite": "NUS Compulsory Core Curriculum or its equivalent",
+"preclusionList": [],
+"parsedPrerequisite" : "nil",
+"prerequisiteList": [],
+"completePrerequisite": {
+            "name": "LL5267V", 
+            "children": []
+},
+"moduleDescription": "This course introduces students to the fundamentals of how lawyers \"architect\"deals. It is taught in two parts. The first examines the unique role of the transactional lawyer and asks the questions: What is a \"deal\"? What do transactional or \"deal\"lawyers do? What is the perceived \u201cvalue\u201d of what transactional lawyers do? How can lawyers successfully design and structure a transaction? The second explores in detail the elements of a theory or framework of \u201cprivate orderings\u201d. The framework covers the economic and business considerations that drive the analysis of which legal principles should apply and how risks and benefits are allocated between the parties. The course explores how the framework of private orderings can apply to guide the assessment of transactions and the choice of contracting constructs and regimes.",
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "LAW",
+"department": "LAW",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[2015,1,0,0,0],[2016,1,0,0,0]]
+}

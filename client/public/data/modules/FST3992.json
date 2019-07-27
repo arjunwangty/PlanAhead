@@ -1,0 +1,55 @@
+{
+"moduleCode": "FST3992",
+"moduleTitle": "Exchange Enrichment Module",
+"moduleCredit": "4",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite" : "NIL",
+"preclusionList": [],
+"parsedPrerequisite" : "nil",
+"prerequisiteList": ["FST3104","FST2102A","FST2106","FST1101","LSM1101"],
+"completePrerequisite": {
+            "name": "FST4101", 
+            "children": [
+                {
+                    "name": "FST3104", 
+                    "children": [
+                        {
+                            "name": "and", 
+                            "children": [
+                                {
+                                    "name": "FST2102A", 
+                                    "children": []
+                                }, 
+                                {
+                                    "name": "FST2106", 
+                                    "children": [
+                                        {
+                                            "name": "and", 
+                                            "children": [
+                                                {
+                                                    "name": "FST1101", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "name": "LSM1101", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+},
+
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "-1",
+"department": "-1",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
+}

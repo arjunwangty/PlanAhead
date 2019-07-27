@@ -1,0 +1,53 @@
+{
+"moduleCode": "CM5211",
+"moduleTitle": "Contemporary Organometallic Chemistry",
+"moduleCredit": "4",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite": "CM4212 or by permission",
+"preclusionList": [],
+"parsedPrerequisite": {
+" and ": ["CM4212"]
+},
+"prerequisiteList": ["CM4212","CM3211","CM3212","CM2111","CM1111"],
+"completePrerequisite": {
+            "name": "CM5211", 
+            "children": [
+                {
+                    "name": "CM4212", 
+                    "children": [
+                        {
+                            "name": "or", 
+                            "children": [
+                                {
+                                    "name": "CM3211", 
+                                    "children": []
+                                }, 
+                                {
+                                    "name": "CM3212", 
+                                    "children": [
+                                        {
+                                            "name": "CM2111", 
+                                            "children": [
+                                                {
+                                                    "name": "CM1111", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+},
+"moduleDescription": "Principles and applications of organometallic compounds: synthesis, reactivity and structural aspects.",
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "SCIENCE",
+"department": "CHEMISTRY",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[2013,1,0,0,0],[2014,1,0,0,0],[2015,1,0,0,0],[2016,1,0,0,0]]
+}

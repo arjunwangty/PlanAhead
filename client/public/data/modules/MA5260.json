@@ -1,0 +1,82 @@
+{
+"moduleCode": "MA5260",
+"moduleTitle": "Probability Theory II",
+"moduleCredit": "4",
+"lockedModules":[
+],
+"preclusion": "ST5205",
+"prerequisite": "MA5259 or ST5214",
+"preclusionList": [
+            "ST5205"
+        ],
+"parsedPrerequisite": {
+            " or ": [
+                "MA5259", 
+                "ST5214"
+            ]
+},
+"prerequisiteList": ["MA5259","ST5214","ST2131","MA1102","MA1102R","MA1312","MA1507","MA1505","MA1505C","MA1521"],
+"completePrerequisite": {
+            "name": "MA5260", 
+            "children": [
+                {
+                    "name": "or", 
+                    "children": [
+                        {
+                            "name": "MA5259", 
+                            "children": []
+                        }, 
+                        {
+                            "name": "ST5214", 
+                            "children": [
+                                {
+                                    "name": "ST2131", 
+                                    "children": [
+                                        {
+                                            "name": "or", 
+                                            "children": [
+                                                {
+                                                    "name": "MA1102", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "name": "MA1102R", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "name": "MA1312", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "name": "MA1507", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "name": "MA1505", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "name": "MA1505C", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "name": "MA1521", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+},
+"moduleDescription": "The objective of this course to introduce students the basics of Brownian motion and martingale theory. For Brownian motion, we cover topics such as existence and uniqueness of Brownian motion, Skorokhod embedding, Donsker's invariance principle, exponential martingales associated with Brownian motion, sample path properties of Brownian motion. As for martingales, we confine ourselves to discrete time parameter martingales and cover topics such as conditional expectations and their properties, martingales (submartingales and supermartinmgales), previsible processes, Doob's upcrossing lemma, Doob's martingale convergence theorem, stopping times, martingale transforms and Doob's optional sampling theorems, martingale inequalities and inequalities for martingale transforms.",
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "SCIENCE",
+"department": "MATHEMATICS",
+"history": [[0,0,0,0,0],[2012,0,2,0,0],[2013,0,2,0,0],[2014,0,2,0,0],[2015,0,2,0,0],[2016,0,2,0,0]]
+}

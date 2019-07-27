@@ -1,0 +1,22 @@
+{
+"moduleCode": "FE5216",
+"moduleTitle": "Financial Technology Innovations Seminar",
+"moduleCredit": "4",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite" : "NIL",
+"preclusionList": [],
+"parsedPrerequisite" : "nil",
+"prerequisiteList": [],
+"completePrerequisite": {
+            "name": "FE5216", 
+            "children": []
+},
+
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "SPECIALITY RESEARCH INSTITUTES/CENTRES",
+"department": "RISK MANAGEMENT INSTITUTE",
+"history": [[0,0,0,0,0],[2012,0,0,0,4],[2013,0,0,0,4],[2014,0,0,0,4],[2015,0,0,0,4],[2016,0,0,0,4]]
+}

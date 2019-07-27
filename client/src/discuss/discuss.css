@@ -1,0 +1,17 @@
+.wrapper {
+  margin: 10px;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid #f1f1f1;
+  border-radius: 1px solid #f1f1f1;
+  padding: 20px;
+}
+.column {
+  vertical-align: middle;
+  height: 100%;
+}
+.logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+}

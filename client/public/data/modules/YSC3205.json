@@ -1,0 +1,26 @@
+{
+"moduleCode": "YSC3205",
+"moduleTitle": "Linear Algebra",
+"moduleCredit": "5",
+"lockedModules":[
+            "YSC3204",
+            "YSC4206",
+            "YSC3206",
+            "YSC4202"
+        ],
+"preclusion": "NIL",
+"prerequisite" : "NIL",
+"preclusionList": [],
+"parsedPrerequisite" : "nil",
+"prerequisiteList": [],
+"completePrerequisite": {
+            "name": "YSC3205", 
+            "children": []
+},
+"moduleDescription": "A rigorous first course in linear algebra of finite-dimensional real and complex vector spaces. The course covers vectors and linear transformations, building geometric intuition and algebraic aptitude. Topics include spaces and subspaces, linear maps, linear independence and spanning, basis, and representations by coordinates and matrices. The theory of linear operators is developed, including some development of canonical forms, eigenvalues and eigenvectors, characteristic and minimal polynomials. The course also covers the structure of bilinear and Hermitian forms. Other topics may include computational aspects of linear algebra and connections to statistics. Problems may include applications to scientific fields and economics.",
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "YALE-NUS COLLEGE",
+"department": "YALE-NUS COLLEGE",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[2015,1,0,0,0],[2016,1,0,0,0]]
+}

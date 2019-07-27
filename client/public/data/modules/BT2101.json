@@ -1,0 +1,90 @@
+{
+"moduleCode": "BT2101",
+"moduleTitle": "IT and Decision Making",
+"moduleCredit": "4",
+"lockedModules":[
+            "IS4010",
+            "CP3880"
+        ],
+"preclusion": "NIL",
+"prerequisite": "(MA1521 Calculus for Computing or MA1102R Calculus) and CS1010 Programming Methodology and (IS1112 E-Business Essentials or BT2102 Data Management and Visualization)",
+"preclusionList": [],
+"parsedPrerequisite": {
+            " and ": [
+                {
+                    " or ": [
+                        "MA1521", 
+                        "MA1102R"
+                    ]
+                }, 
+                "CS1010", 
+                {
+                    " or ": [
+                        "IS1112", 
+                        "BT2102"
+                    ]
+                }
+            ]
+},
+"prerequisiteList": ["MA1521","MA1102R","CS1010","IS1112","BT2102","BT1101"],
+"completePrerequisite": {
+            "name": "BT2101", 
+            "children": [
+                {
+                    "name": "and", 
+                    "children": [
+                        {
+                            "name": "or", 
+                            "children": [
+                                {
+                                    "name": "MA1521", 
+                                    "children": []
+                                }, 
+                                {
+                                    "name": "MA1102R", 
+                                    "children": []
+                                }
+                            ]
+                        }, 
+                        {
+                            "name": "CS1010", 
+                            "children": []
+                        }, 
+                        {
+                            "name": "or", 
+                            "children": [
+                                {
+                                    "name": "IS1112", 
+                                    "children": []
+                                }, 
+                                {
+                                    "name": "BT2102", 
+                                    "children": [
+                                        {
+                                            "name": "and", 
+                                            "children": [
+                                                {
+                                                    "name": "CS1010", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "name": "BT1101", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+},
+"moduleDescription": "This module provides a general introduction to using various IT-driven tools, software and techniques for decision making support. The module will start off by describing the decision-making process in businesses today, including the hierarchy of decision making responsibilities. It will then move on to the cognitive aspects of decision making such as the problem solving, role of logic, and probability. Algorithms and software for multi-criteria decision analysis (MCDA) and its varieties, e.g., analytic hierarchy process (AHP), multi-attribute utility theory (MAUT), pair-wise rankings of all possible alternatives will be discussed. Introduction will be provided to intelligent techniques for decision making, e.g., expert systems, neural networks, genetic algorithms, and support vector machines. Examples will be drawn from various industry domains and applications.",
+"crossModule": "-1",
+"corequisite": "NIL",
+"faculty": "SCHOOL OF COMPUTING",
+"department": "INFORMATION SYSTEMS",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[2014,1,0,0,0],[2015,1,0,0,0],[2016,1,0,0,0]]
+}

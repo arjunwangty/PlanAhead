@@ -1,0 +1,94 @@
+{
+"moduleCode": "CS4236",
+"moduleTitle": "Cryptography Theory and Practice",
+"moduleCredit": "4",
+"lockedModules":[
+            "CS6231"
+        ],
+"preclusion": "NIL",
+"prerequisite": "CS1231 Discrete Structures and (CS2010 Data Structure and Algorithms II or CS2020 Data Structure and Algorithms (Accelerated)) and CS2107 Introduction to Information Security .",
+"preclusionList": [],
+"parsedPrerequisite": {
+            " and ": [
+                "CS1231", 
+                {
+                    " or ": [
+                        "CS2010", 
+                        "CS2020"
+                    ]
+                }, 
+                "CS2107"
+            ]
+},
+"prerequisiteList": ["CS1231","CS2010","CS1020","CS1010","CS1020E","CS1010E","CG1103","CS2020","CS2107"],
+"completePrerequisite": {
+            "name": "CS4236", 
+            "children": [
+                {
+                    "name": "and", 
+                    "children": [
+                        {
+                            "name": "CS1231", 
+                            "children": []
+                        }, 
+                        {
+                            "name": "or", 
+                            "children": [
+                                {
+                                    "name": "CS2010", 
+                                    "children": [
+                                        {
+                                            "name": "or", 
+                                            "children": [
+                                                {
+                                                    "name": "CS1020", 
+                                                    "children": [
+                                                        {
+                                                            "name": "CS1010", 
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }, 
+                                                {
+                                                    "name": "CS1020E", 
+                                                    "children": [
+                                                        {
+                                                            "name": "CS1010E", 
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }, 
+                                                {
+                                                    "name": "CG1103", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "name": "CS2020", 
+                                    "children": []
+                                }
+                            ]
+                        }, 
+                        {
+                            "name": "CS2107", 
+                            "children": [
+                                {
+                                    "name": "CS1010", 
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+},
+"moduleDescription": "This module aims to introduce the foundation, principles and concepts behind cryptology and the design of secure communication systems. The emphasis is on the formulation and techniques of various cryptographic primitives, and on the secure usage of such primitives to achieve the goals of confidentially, integrity, and authenticity in both theoretical settings and practical scenarios. Basic topics include pseudorandom functions, symmetric key encryption, public key encryption, message authentication codes, hash functions, digital signatures, key exchange and PKI. Selected topics may include: secret sharing, TCP/IP security, Kerberos, SSL, trusted computing, side-channel attacks.",
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "SCHOOL OF COMPUTING",
+"department": "COMPUTER SCIENCE",
+"history": [[0,0,0,0,0],[2012,0,2,0,0],[2013,0,2,0,0],[2014,1,0,0,0],[2015,1,0,0,0],[2016,1,0,0,0]]
+}

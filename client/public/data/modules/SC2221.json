@@ -1,0 +1,22 @@
+{
+"moduleCode": "SC2221",
+"moduleTitle": "Humans and Natures",
+"moduleCredit": "4",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite" : "NIL",
+"preclusionList": [],
+"parsedPrerequisite" : "nil",
+"prerequisiteList": [],
+"completePrerequisite": {
+            "name": "SC2221", 
+            "children": []
+},
+"moduleDescription": "Did nature make the human, or have humans made nature? Or, are both continuously co-evolving, each changing in relation to the other? This module explores the socio-political dynamics and stakes of the practices and institutions through wind contemporary societies endeavor to understand and appropriate the natural world. We use concepts from environmental sociology and ecological anthropology, to look not only at how different societies engage with nature, but also at how these engagements have in turn shaped social thought. Topics include urban ecology and infrastructure, biotechnology, bio-capitalism, international energy politics, climate change, \u2018natural\u2019 disasters, global environmental inequality, conservation and environmentalism.",
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "ARTS & SOCIAL SCIENCES",
+"department": "SOCIOLOGY",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[2013,0,2,0,0],[0,0,0,0,0],[2015,1,0,0,0],[2016,1,0,0,0]]
+}

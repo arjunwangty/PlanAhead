@@ -1,0 +1,24 @@
+{
+"moduleCode": "MA6220",
+"moduleTitle": "Model Theory",
+"moduleCredit": "4",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite": "MA5219 or departmental approval",
+"preclusionList": [],
+"parsedPrerequisite": {
+" and ": ["MA5219"]
+},
+"prerequisiteList": [],
+"completePrerequisite": {
+            "name": "MA6235", 
+            "children": []
+},
+"moduleDescription": "This module is designed for graduate students in mathematics, who have sufficient background in mathematical logic. The course will be structured around Morley\u2019s Categoricity Theorem. To set up the stage of the proof of Morley\u2019s Theorem, some necessary knowledge is also introduced, which turns out to be a good training in model theory.",
+"crossModule": "-1",
+"corequisite": "NIL",
+"faculty": "SCIENCE",
+"department": "MATHEMATICS",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[2013,1,0,0,0],[0,0,0,0,0],[2015,0,2,0,0],[0,0,0,0,0]]
+}

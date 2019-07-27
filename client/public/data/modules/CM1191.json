@@ -1,0 +1,25 @@
+{
+"moduleCode": "CM1191",
+"moduleTitle": "Experiments in Chemistry 1",
+"moduleCredit": "4",
+"lockedModules":[
+            "CM2192",
+            "CM2191",
+            "FST2107"
+        ],
+"preclusion": "NIL",
+"prerequisite": "H2/A-level Chemistry or its equivalent or by permission",
+"preclusionList": [],
+"parsedPrerequisite" : "nil",
+"prerequisiteList": [],
+"completePrerequisite": {
+            "name": "CM1191", 
+            "children": []
+},
+"moduleDescription": "This is a module designed for chemistry majors and deals with laboratory experiments on selected topics of basic chemistry prinicples with theoretical contents selected from CM1111, CM1121 and CM1131. The experiments are designed to strengthen the students\u2019 understanding of basic organic, inorganic and physical chemistry. Upon completion of the module, students should have learnt some essential laboratory skills and be able to perform basic data processing and write lab reports. In addition to the aforementioned activities, CM1191 will also cover errors in chemical analysis which will be taught during the lectures.",
+"crossModule": "-1",
+"corequisite": "NIL",
+"faculty": "SCIENCE",
+"department": "CHEMISTRY",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[2013,1,2,0,0],[2014,1,2,0,0],[2015,1,2,0,0],[2016,1,2,0,0]]
+}

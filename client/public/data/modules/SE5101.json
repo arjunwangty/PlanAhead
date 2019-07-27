@@ -1,0 +1,22 @@
+{
+"moduleCode": "SE5101",
+"moduleTitle": "Research Project",
+"moduleCredit": "4",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite" : "NIL",
+"preclusionList": [],
+"parsedPrerequisite" : "nil",
+"prerequisiteList": [],
+"completePrerequisite": {
+            "name": "SE5151", 
+            "children": []
+},
+
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "ARTS & SOCIAL SCIENCES",
+"department": "SOUTHEAST ASIAN STUDIES",
+"history": [[0,0,0,0,0],[2012,0,0,0,4],[0,0,0,0,0],[0,0,0,0,0],[2015,0,2,3,0],[0,0,0,0,0]]
+}

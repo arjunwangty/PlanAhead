@@ -1,0 +1,27 @@
+{
+"moduleCode": "FIN3120E",
+"moduleTitle": "TIF: Phy. Comdty Mkt & Assets",
+"moduleCredit": "4",
+"lockedModules":[
+],
+"preclusion": "NIL",
+"prerequisite": "FIN2004 Finance and FIN3103 Financial Markets",
+"preclusionList": [],
+"parsedPrerequisite": {
+            " and ": [
+                "FIN2004", 
+                "FIN3103"
+            ]
+},
+"prerequisiteList": [],
+"completePrerequisite": {
+            "name": "FIN3129", 
+            "children": []
+},
+"moduleDescription": "This module aims to do the following: - To provide students with an overview of the commodity markets as an asset class - To introduce key concepts for commodity trading and investing businesses - To provide a framework for assessing risks and opportunities for investors in physical commodity assets.",
+"crossModule": "-1",
+"corequisite": "Recommended (but not required) co-requisite: FIN3120D Topics in Finance: Foreign Exchange Trading. The rationale is that commodities and foreign exchange usually sit in the same division in many banks, hence having both courses would be useful from a job",
+"faculty": "SCHOOL OF BUSINESS",
+"department": "FINANCE",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[2014,1,0,0,0],[2015,1,0,0,0],[0,0,0,0,0]]
+}

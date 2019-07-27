@@ -1,0 +1,48 @@
+{
+"moduleCode": "FST1992",
+"moduleTitle": "Exchange Enrichment Level 1000 Module",
+"moduleCredit": "4",
+"lockedModules":[
+            "FST2108"
+        ],
+"preclusion": "FST2102A",
+"prerequisite" : "NIL",
+"preclusionList": [
+            "FST2102A"
+        ],
+"parsedPrerequisite" : "nil",
+"prerequisiteList": ["FST1101","CM1121","CM1501"],
+"completePrerequisite": {
+            "name": "FST2102B", 
+            "children": [
+                {
+                    "name": "and", 
+                    "children": [
+                        {
+                            "name": "FST1101", 
+                            "children": []
+                        }, 
+                        {
+                            "name": "or", 
+                            "children": [
+                                {
+                                    "name": "CM1121", 
+                                    "children": []
+                                }, 
+                                {
+                                    "name": "CM1501", 
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+},
+
+"crossModule": "-1",
+"corequisite": "-1",
+"faculty": "-1",
+"department": "-1",
+"history": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
+}
