@@ -22,7 +22,7 @@ const db = mysql.createConnection({
 db.connect();
 
 app.get("/comments", function(req, res) {
-  db.query("SELECT * FROM comments.comments", function(err, results) {
+  db.query("SELECT * FROM comments", function(err, results) {
     if (err) throw err;
     res.send(results);
     console.log("Sent list of items");
@@ -37,7 +37,7 @@ app.post("/comments", function(req, res) {
     year: req.body.year,
     comment: req.body.comment
   };
-  db.query("INSERT INTO comments.comments SET ?", data, (err, result) => {
+  db.query("INSERT INTO comments SET ?", data, (err, result) => {
     if (err) throw err;
     console.log(result);
     res.send({
