@@ -8,7 +8,6 @@ const cors = require("cors");
 app.use(bodyParser.json());
 app.use(cors());
 
-// Serve the static files from the React app
 app.use(express.static(path.join(__dirname, "client/build")));
 
 //mysql://bceda05831a044:ca6092a7@us-cdbr-iron-east-02.cleardb.net/heroku_029a0b50e9489da?reconnect=true
@@ -41,7 +40,7 @@ app.post("/comments", function(req, res) {
     if (err) throw err;
     console.log(result);
     res.send({
-      status: "Data sukses diinput!",
+      status: "success",
       no: null,
       username: req.body.username,
       course: req.body.course,
@@ -51,7 +50,6 @@ app.post("/comments", function(req, res) {
   });
 });
 
-// Handles any requests that don't match the ones above
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/client/build/index.html"));
 });

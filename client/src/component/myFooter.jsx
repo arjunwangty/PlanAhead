@@ -7,20 +7,24 @@ class MyFooter extends Component {
     return (
       <div className="foot">
         <p>
-          Relavent Links:
+          <br />
           <em>
+            <title>Useful links:</title>
             <a href="http://www.nus.edu.sg/" target="view_window">
               NUS
-            </a>{" "}
+            </a>
+            ||
             <a href="https://nusmods.com/timetable/sem-1" target="view_window">
               NUSMods
             </a>
+            ||
             <a
               href="https://www.comp.nus.edu.sg/about/depts/cs/"
               target="view_window"
             >
               NUS School of Computing
             </a>
+            ||
             <a
               href="http://www.nus.edu.sg/research/smartnation/"
               target="view_window"
@@ -29,13 +33,13 @@ class MyFooter extends Component {
             </a>
           </em>
         </p>
-        <div style={{ height: "170px" }} />
+        <br />
+        <br />
         <Divider
           style={{
             backgroundColor: "rgb(40, 80, 128)",
             border: "0px",
-            padding: 0,
-            margin: 0
+            padding: 0
           }}
         />
         <p className="sign">© 2019 National University of Singapore.</p>

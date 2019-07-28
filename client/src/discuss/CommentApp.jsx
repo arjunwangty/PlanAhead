@@ -3,9 +3,10 @@ import axios from "axios";
 import CommentInput from "./CommentInput";
 import CommentList from "./CommentList";
 import "./discuss.css";
-import { Layout, Menu } from "antd";
+import MyFooter from "../component/myFooter";
+import { Layout, Menu, message } from "antd";
 
-const { Content, Sider } = Layout;
+const { Content, Sider, Footer } = Layout;
 const firstMajor = [
   "Data Science and Analytics",
   "Computer Science",
@@ -43,8 +44,8 @@ class CommentApp extends Component {
 
   handleSubmitComment(comment) {
     if (!comment) return;
-    if (!comment.username) return alert("Please enter a username");
-    if (!comment.comment) return alert("Please enter your comments");
+    if (!comment.username) return message.warning("Please enter a username");
+    if (!comment.comment) return message.warning("Please enter your comment");
     axios
       .post("/comments", {
         username: comment.username,
@@ -58,8 +59,9 @@ class CommentApp extends Component {
       .catch(function(error) {
         console.log(error);
       });
-
-    this._loadComments();
+    return message.success(
+      "Comment submitted, please reload the page to view your comment "
+    );
   }
 
   handleSelect(value) {
@@ -102,6 +104,13 @@ class CommentApp extends Component {
                 <CommentList comments={this.state.comments} />
               </div>
             </Content>
+            <Footer
+              style={{
+                padding: "0px"
+              }}
+            >
+              <MyFooter />
+            </Footer>
           </Layout>
         </Layout>
       </div>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import SemDrop from "./semDrop";
 import PropTypes from "prop-types";
-import { Select } from "antd";
+import { Select, Tag, Icon, Button } from "antd";
 import "../style/sem.less";
 const { Option } = Select;
 
@@ -39,7 +39,6 @@ const wrapperStyle3 = {
   width: "100px"
 };
 
-
 export default class Sem extends Component {
   constructor(props) {
     super(props);
@@ -48,10 +47,10 @@ export default class Sem extends Component {
       sem: [
         [2, "Yr1 Vac1"],
         [4, "Yr1 Vac2"],
-        [6, "Y2 Vac1"],
-        [8, "Y2 Vac2"],
-        [10, "Y3 Vac1"],
-        [12, "Y3 Vac3"],
+        [6, "Yr2 Vac1"],
+        [8, "Yr2 Vac2"],
+        [10, "Yr3 Vac1"],
+        [12, "Yr3 Vac3"],
         [14, "Yr4 Vac1"],
         [16, "Yr4 Vac2"],
         [17, "Yr5 Sem1"],
@@ -78,10 +77,10 @@ export default class Sem extends Component {
     if (this.props.id === "t") {
       return (
         <div className="col-md-1.5" style={wrapperstyle}>
-          <p>year</p>
+          <p className="year">New</p>
           <Select
             getPopupContainer={triggerNode => triggerNode.parentNode}
-            style={{ width: "95px" }}
+            style={{ width: "80px", height: "30px" }}
             showSearch
             className="chooseyear"
             placeholder="Year"
@@ -94,23 +93,27 @@ export default class Sem extends Component {
             }
           >
             {this.state.sem.map(y => (
-              <Option style={{fontSize:"12px"}}value={y[0].toString()}>{y[1]}</Option>
+              <Option style={{ fontSize: "12px" }} value={y[0].toString()}>
+                {y[1]}
+              </Option>
             ))}
           </Select>
-          <br></br><br></br>
+          <br />
+          <br />
+          <br />
           <SemDrop
             id={this.props.id}
             isDroppable={false}
             adyear={this.props.adyear}
             major={this.props.major}
           />
-          <button
+          <Button
             className="cross"
             onClick={this.props.onDelete}
             value={this.props.id}
           >
-            ×
-          </button>
+            <Icon type="delete" />
+          </Button>
         </div>
       );
     } else if (
@@ -120,9 +123,11 @@ export default class Sem extends Component {
       if (this.props.year !== "Year 5") {
         return (
           <div className="col-md-1.5" style={wrapperstyle}>
-            <p className="text-center">{this.props.year}</p>
-            <p>{this.props.semester}</p>
-            <button id={`${this.props.id}button`}>{this.props.button}</button>
+            <p className="year">{this.props.year}</p>
+            <p className="sem">{this.props.semester}</p>
+            <Tag style={{ marginBottom: "14px" }} id={`${this.props.id}button`}>
+              {this.props.button}
+            </Tag>
             <SemDrop
               id={this.props.id}
               isDroppable={true}
@@ -134,44 +139,48 @@ export default class Sem extends Component {
       } else {
         return (
           <div className="col-md-1.5" style={wrapperstyle}>
-            <p className="text-center">{this.props.year}</p>
-            <p>{this.props.semester}</p>
-            <button id={`${this.props.id}button`}>{this.props.button}</button>
+            <p className="year">{this.props.year}</p>
+            <p className="sem">{this.props.semester}</p>
+            <Tag style={{ marginBottom: "14px" }} id={`${this.props.id}button`}>
+              {this.props.button}
+            </Tag>
             <SemDrop
               id={this.props.id}
               isDroppable={true}
               adyear={this.props.adyear}
               major={this.props.major}
             />
-            <button
-            className="cross"
-            onClick={this.props.onDelete}
-            value={this.props.id}
-          >
-            ×
-          </button>
+            <Button
+              className="cross"
+              onClick={this.props.onDelete}
+              value={this.props.id}
+            >
+              <Icon type="delete" />
+            </Button>
           </div>
         );
       }
     } else {
       return (
         <div className="col-md-1.5" style={wrapperstyle}>
-          <p className="text-center">{this.props.year}</p>
-          <p>{this.props.semester}</p>
-          <button id={`${this.props.id}button`}>{this.props.button}</button>
+          <p className="year">{this.props.year}</p>
+          <p className="sem">{this.props.semester}</p>
+          <Tag style={{ marginBottom: "14px" }} id={`${this.props.id}button`}>
+            {this.props.button}
+          </Tag>
           <SemDrop
             id={this.props.id}
             isDroppable={true}
             adyear={this.props.adyear}
             major={this.props.major}
           />
-          <button
+          <Button
             className="cross"
             onClick={this.props.onDelete}
             value={this.props.id}
           >
-            ×
-          </button>
+            <Icon type="delete" />
+          </Button>
         </div>
       );
     }

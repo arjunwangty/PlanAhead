@@ -1,0 +1,44 @@
+{
+  "moduleCode": "CS4261",
+  "moduleTitle": "Algorithmic Mechanism Design",
+  "moduleCredit": "4",
+  "preclusion": "CS5461",
+  "prerequisite": "(ESP1107 or ESP2107 or ST1232 or ST2132 or ST2334) and ((CS2010 or its equivalent) or CS2020 or (CS2040 or its equivalent)) and ((MA1100 or (CS1231 or its equivalent)) and (MA1101R or MA1311 or MA1506 or MA1508E)",
+  "preclusionList": ["CS5461"],
+  "parsedPrerequisite": {
+    " and ": [
+      { " or ": ["ESP1107", "ESP2107", "ST1232", "ST2132", "ST2334"] },
+      { " or ": ["CS2010", "CS2020", "CS2040"] },
+      { " or ": ["MA1101R", "MA1311", "MA1506", "MA1508E"] }
+    ]
+  },
+  "prerequisiteList": [
+    "ESP1107",
+    "ESP2107",
+    "ST1232",
+    "ST2132",
+    "ST2334",
+    "CS2010",
+    "CS2020",
+    "CS2040",
+    "MA1100",
+    "CS1231",
+    "MA1101R",
+    "MA1311",
+    "MA1506",
+    "MA1508E"
+  ],
+  "moduleDescription": "Recent years have seen a dramatic rise in the use of algorithms for solving problems involving strategic decision makers. Deployed algorithms now assist in a variety of economic interactions: assigning medical residents to schools, allocating students to courses, allocating security resources in airports, allocating computational resources and dividing rent. We will explore foundational topics at the intersection of economics and computation, starting with the foundations of game theory: Nash equilibria, the theory of cooperative games, before proceeding to covering more advanced topics: matching algorithms, allocation of indivisible goods, and mechanism design.",
+  "crossModule": "-1",
+  "corequisite": "NIL",
+  "faculty": "SCHOOL OF COMPUTING",
+  "department": "COMPUTER SCIENCE",
+  "history": [
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [2013, 1, 0, 0, 0],
+    [2014, 1, 0, 0, 0],
+    [2015, 1, 0, 0, 0],
+    [2016, 1, 0, 0, 0]
+  ]
+}

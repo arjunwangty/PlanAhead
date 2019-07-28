@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Sem from "./sem";
-import { message } from "antd";
+import { message, Button, Icon } from "antd";
 import storage from "../component/storage";
 import "../style/planner.less";
 
@@ -40,28 +40,6 @@ class NPlanner extends Component {
     this.handleChoose = this.handleChoose.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
   }
-  render() {
-    return (
-      <div className="planner">
-        {this.state.semesters.map(sem => (
-          <Sem
-            id={sem[0]}
-            key={sem[0]}
-            year={this.year(sem[0])}
-            semester={this.semester(sem[0])}
-            onChoose={this.handleChoose}
-            onDelete={this.handleDelete}
-            adyear={this.props.adyear}
-            major={this.props.major}
-            button={sem[1]}
-          />
-        ))}
-        <button className="plus" onClick={this.handleAdd}>
-          +
-        </button>
-      </div>
-    );
-  }
 
   handleAdd() {
     const { adyear, major } = this.props;
@@ -81,13 +59,14 @@ class NPlanner extends Component {
     if (
       code === "19" &&
       semesters.filter(s => {
-        return parseInt(s[0].substring(1)) ===17
+        return parseInt(s[0].substring(1)) === 17;
       }).length === 0
     ) {
       return;
     }
     if (
-      code !== "17" && code !== "19" &&
+      code !== "17" &&
+      code !== "19" &&
       semesters.filter(s => {
         return parseInt(s[0].substring(1)) > parseInt(code) && s[0] !== "t";
       }).length === 0
@@ -179,6 +158,41 @@ class NPlanner extends Component {
       return "Vacation 2";
     }
   };
+
+  render() {
+    return (
+      <div className="planner">
+        {this.state.semesters.map(sem => (
+          <Sem
+            id={sem[0]}
+            key={sem[0]}
+            year={this.year(sem[0])}
+            semester={this.semester(sem[0])}
+            onChoose={this.handleChoose}
+            onDelete={this.handleDelete}
+            adyear={this.props.adyear}
+            major={this.props.major}
+            button={sem[1]}
+          />
+        ))}
+        <Button
+          className="default"
+          style={{
+            borderRadius: "50%",
+            textAlign: "center",
+            paddingLeft: "12px",
+            paddingTop: "2px",
+            height: "40px",
+            width: "40px",
+            marginLeft: "20px"
+          }}
+          onClick={this.handleAdd}
+        >
+          <Icon type="plus" />
+        </Button>
+      </div>
+    );
+  }
 }
 
 export default NPlanner;

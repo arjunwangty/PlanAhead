@@ -1,0 +1,17 @@
+{
+  "moduleCode": "CS5242",
+  "moduleTitle": "Neural Networks and Deep Learning",
+  "moduleCredit": "4",
+  "preclusion": "NIL",
+  "prerequisite": "CS3244 Machine Learning",
+  "preclusionList": [],
+  "parsedPrerequisite": {
+    " and ": ["CS3244"]
+  },
+  "prerequisiteList": ["CS3244"],
+  "moduleDescription": "This module provides students with the knowledge of deep neural network and enables them to apply deep learning methods effectively on real world problems. The module emphasizes on the understanding of the principles of neural networks and deep learning; practical guidelines and techniques for deep learning; and their applications. Through assignments and projects, students will design, develop, and evaluate deep learning-based solutions to practical problems, such as those in the areas of computer vision, bioinformatics, fintech, cybersecurity, and games.",
+  "crossModule": "-1",
+  "corequisite": "-1",
+  "faculty": "SCHOOL OF COMPUTING",
+  "department": "COMPUTER SCIENCE"
+}

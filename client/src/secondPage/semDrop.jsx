@@ -9,12 +9,11 @@ const newStyle = {
   justifyContent: "center",
   whiteSpace: "normal",
   backgroundColor: "rgba(0,0,0,0)",
-  height: "79.5%",
+  height: "360px",
   textAlign: "center",
-  paddingLeft:"12px"
+  paddingLeft: "12px"
 };
 export default class SemDrop extends React.Component {
-
   drop = e => {
     e.preventDefault();
     if (this.props.isDroppable) {
@@ -27,29 +26,29 @@ export default class SemDrop extends React.Component {
     e.preventDefault();
   };
 
-
   render() {
-    const {adyear, major}=this.props;
-    let mods = storage.getYM(adyear, major)[this.props.id]
+    const { adyear, major } = this.props;
+    let mods = storage.getYM(adyear, major)[this.props.id];
     return (
       <div
-      id={this.props.id}
-      onDrop={this.drop}
-      onDragOver={this.allowDrop}
-      style={newStyle}
-    >
-      {mods.map(mod=>(
-        <Draggable className="list-inline-item" id={`${mod[0]}Draggable`}parent={this.props.id} name={mod[2]} adyear={this.props.adyear} major={this.props.major}>
-        <Mod
-          id={mod[0]}
-          code={mod[0]}
-          color={mod[1]}
-          name={mod[2]}
-          
-        />
-      </Draggable>
-      ))}
-    </div>
+        id={this.props.id}
+        onDrop={this.drop}
+        onDragOver={this.allowDrop}
+        style={newStyle}
+      >
+        {mods.map(mod => (
+          <Draggable
+            className="list-inline-item"
+            id={`${mod[0]}Draggable`}
+            parent={this.props.id}
+            name={mod[2]}
+            adyear={this.props.adyear}
+            major={this.props.major}
+          >
+            <Mod id={mod[0]} code={mod[0]} color={mod[1]} name={mod[2]} />
+          </Draggable>
+        ))}
+      </div>
     );
   }
 }

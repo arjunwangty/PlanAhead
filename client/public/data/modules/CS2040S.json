@@ -1,0 +1,48 @@
+{
+  "moduleCode": "CS2040S",
+  "moduleTitle": "Data Structures and Algorithms",
+  "moduleCredit": "4",
+  "preclusion": "CS1020, CS1020E, CS2020, CS2010, CS2040, CS2040C",
+  "prerequisite": "(MA1100 or (CS1231 or its equivalent)) and (CS1010 or its equivalent)",
+  "preclusionList": [
+    "CS1020",
+    "CS1020E",
+    "CS2020",
+    "CS2010",
+    "CS2040C",
+    "CS2040S",
+    "MA1100",
+    "CS1231"
+  ],
+  "parsedPrerequisite": {
+    " and ": [
+      { " or ": ["MA1100", "CS1231"] },
+      {
+        " or ": [
+          "CS1010",
+          "CS1010S",
+          "CS1010X",
+          "CS1010E",
+          "CS1010J",
+          "CS1010R",
+          "CS1101S"
+        ]
+      }
+    ]
+  },
+  "prerequisiteList": [
+    "CS1010",
+    "CS1010S",
+    "CS1010X",
+    "CS1010E",
+    "CS1010J",
+    "CS1010R",
+    "CS1101S"
+  ],
+
+  "moduleDescription": "This module introduces students to the design and implementation of fundamental data structures and algorithms. The module covers basic data structures (linked lists, stacks, queues, hash tables, binary heaps, trees, and graphs), searching and sorting algorithms, and basic analysis of algorithms.",
+  "crossModule": "-1",
+  "corequisite": "-1",
+  "faculty": "SCHOOL OF COMPUTING",
+  "department": "COMPUTER SCIENCE"
+}

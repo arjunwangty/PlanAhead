@@ -9,10 +9,10 @@ import {
 import Welcome from "./welcome/welcome";
 import EntirePage from "./secondPage/newPage";
 import CommentApp from "./discuss/CommentApp";
-import MyFooter from "./component/myFooter";
+
 import { Menu, Icon, Layout } from "antd";
 
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 
 class App extends Component {
   state = {
@@ -55,10 +55,10 @@ class App extends Component {
                   height: "60px"
                 }}
               >
-                <Icon type="home" style={{ display: "inline-block" }} />
+                <Icon type="database" style={{ display: "inline-block" }} />
                 <Link to={"/"} style={{ display: "inline-block" }}>
                   {" "}
-                  Home{" "}
+                  Planner{" "}
                 </Link>
               </Menu.Item>
               <Menu.Item
@@ -86,7 +86,6 @@ class App extends Component {
               <Redirect exact strict push from="/" to="/planner" />
             </Switch>
           </Content>
-          <MyFooter />
         </Router>
       </Layout>
     );

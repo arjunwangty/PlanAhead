@@ -76,7 +76,7 @@ class CommentInput extends Component {
       const { username, comment, course, year } = this.state;
       this.props.onSubmit({ username, comment, course, year });
     }
-    this.setState({ content: "" });
+    this.setState({ comment: "" });
   }
 
   componentWillMount() {
@@ -117,7 +117,9 @@ class CommentInput extends Component {
               onChange={this.handleCourseChange.bind(this)}
             >
               {firstMajor.map(y => (
-                <Option value={y}>{y}</Option>
+                <Option key={y} value={y}>
+                  {y}
+                </Option>
               ))}
             </Select>
 
@@ -129,7 +131,9 @@ class CommentInput extends Component {
               onChange={this.handleYearChange.bind(this)}
             >
               {yearOfEnrolment.map(y => (
-                <Option value={y}>{y}</Option>
+                <Option key={y} value={y}>
+                  {y}
+                </Option>
               ))}
             </Select>
           </InputGroup>

@@ -1,0 +1,49 @@
+{
+  "moduleCode": "CS2030",
+  "moduleTitle": "Programming Methodology II",
+  "moduleCredit": "4",
+  "preclusion": "CS1020 or its equivalent",
+  "prerequisite": "CS1010 or its equivalent",
+  "preclusionList": [
+    "CS1020",
+    "CS1020E",
+    "CS2020",
+    "CS2010",
+    "CS2040C",
+    "CS2040S"
+  ],
+  "parsedPrerequisite": {
+    " or ": [
+      "CS1010",
+      "CS1010S",
+      "CS1010X",
+      "CS1010E",
+      "CS1010J",
+      "CS1010R",
+      "CS1101S"
+    ]
+  },
+  "prerequisiteList": [
+    "CS1010",
+    "CS1010S",
+    "CS1010X",
+    "CS1010E",
+    "CS1010J",
+    "CS1010R",
+    "CS1101S"
+  ],
+
+  "moduleDescription": "This module is a follow up to CS1010. It explores two modern programming paradigms, object-oriented programming and functional programming. Through a series of integrated assignments, students will learn to develop medium-scale software programs in the order of thousands of lines of code and tens of classes using objectoriented design principles and advanced programming constructs available in the two paradigms. Topics include objects and classes, composition, association, inheritance, interface, polymorphism, abstract classes, dynamic binding, lambda expression, effect-free programming, first class functions, closures, continuations, monad, etc.",
+  "crossModule": "-1",
+  "corequisite": "-1",
+  "faculty": "SCHOOL OF COMPUTING",
+  "department": "COMPUTER SCIENCE",
+  "history": [
+    [0, 0, 0, 0, 0],
+    [2012, 0, 2, 0, 0],
+    [2013, 0, 2, 0, 0],
+    [2014, 0, 2, 0, 0],
+    [2015, 0, 2, 0, 0],
+    [2016, 0, 2, 0, 0]
+  ]
+}
