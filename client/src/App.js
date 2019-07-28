@@ -9,6 +9,7 @@ import {
 import Welcome from "./welcome/welcome";
 import EntirePage from "./secondPage/newPage";
 import CommentApp from "./discuss/CommentApp";
+import MyFooter from "./component/myFooter";
 import { Menu, Icon, Layout } from "antd";
 
 const { Header, Content, Footer } = Layout;
@@ -85,6 +86,7 @@ class App extends Component {
               <Redirect exact strict push from="/" to="/planner" />
             </Switch>
           </Content>
+          <MyFooter />
         </Router>
       </Layout>
     );

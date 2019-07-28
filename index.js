@@ -11,12 +11,13 @@ app.use(cors());
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, "client/build")));
 
-// An api endpoint that returns a short list of items
+//mysql://bceda05831a044:ca6092a7@us-cdbr-iron-east-02.cleardb.net/heroku_029a0b50e9489da?reconnect=true
+
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "orbital@NUS2019",
-  database: "comments"
+  host: "us-cdbr-iron-east-02.cleardb.net",
+  user: "bceda05831a044",
+  password: "ca6092a7",
+  database: "heroku_029a0b50e9489da"
 });
 db.connect();
 

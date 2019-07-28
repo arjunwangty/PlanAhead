@@ -2,13 +2,18 @@ import React, { Component } from "react";
 import NSideBar from "./newSideBar";
 import NPlanner from "./newPlanner";
 import SearchBar from "./searchBar";
-import { Row, Col } from 'antd';
+import Delete from "./dust";
+import Head from "./head";
 
+import { Row, Col } from "antd";
+import storage from "../component/storage";
+import "../style/info.less";
 
 class EntirePage extends Component {
-  
   render() {
-    const {year, major} = this.props.location.state;
+    const { year, major } = this.props.location.state;
+    const init = storage.storeYM(year, major);
+    const mc = storage.getYMCol(year, major, "totalmc");
     return (
       <div
         style={{
@@ -16,64 +21,41 @@ class EntirePage extends Component {
           verticalAlign: "middle"
         }}
       >
+        <Head adyear={year} major={major} />
         <Row>
-          <Col span={6}
+          <Col
+            span={7}
             style={{
-              verticalAlign: "middle",
-              height: "100%"
+              verticalAlign: "middle"
             }}
           >
-              <NSideBar className="pre-scrollable" adyear={year} major={major}/>
-            <div
-              style={{
-                backgroundColor: "rgb(120,206,179)",
-                marginTop: "5px",
-                marginBottom: "5px",
-                borderRadius: "4px",
-                width: "270px"
-              }}
-            >
-              <SearchBar />
-            </div>
-            <div
-              className="pre-scrollable col-mid-4"
-              style={{
-                height: "140px",
-                padding: "10px",
-                paddingLeft: "15px",
-                backgroundColor: "rgb(69,118,149)",
-                borderRadius: "4px",
-                textAlign: "left",
-                color: "white",
-                width: "270px"
-              }}
-            >
+            <NSideBar adyear={year} major={major} init={init} />
+            <SearchBar adyear={year} major={major} />
+            <Delete adyear={year} major={major} />
+            <div className="info">
               <p>
-                <strong>Module code:</strong>
+                <strong>Module code: </strong>
                 <em id="ModuleCode" />
               </p>
               <p>
-                Module Credits:
+                <strong>Module Credits: </strong>
                 <em id="ModuleCredits" />
               </p>
               <p>
-                Module Prerequisite:
+                <strong>Module Prerequisite: </strong>
                 <em id="ModulePrerequisite" />
               </p>
               <p>
-                Module description:
+                <strong>Module description: </strong>
                 <em id="ModuleDescription" />
               </p>
             </div>
           </Col>
-          <Col span={16} style={{
-                  whiteSpace: "nowrap",
-                  verticalAlign: "middle",
-                  overflowX: "scroll",
-                  height: "100%"
-                }}>
-                <NPlanner />
-              <p>total mc:<em id="totalmc">0</em></p>
+          <Col span={17}>
+            <NPlanner adyear={year} major={major} init={init} />
+            <p>
+              total mc:<em id="totalmc">{mc}</em>
+            </p>
           </Col>
         </Row>
       </div>

@@ -2,12 +2,10 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import { message, Select, Button } from "antd";
 import test from "./test";
-import "./welcome.less";
+import "../style/welcome.less";
 
 const { Option } = Select;
 const yearOfEnrolment = [
-  "AY2012/2013",
-  "AY2013/2014",
   "AY2014/2015",
   "AY2015/2016",
   "AY2016/2017",
@@ -17,7 +15,7 @@ const yearOfEnrolment = [
 ];
 const firstMajor = [
   "Data Science and Analytics",
-  "Computing Science",
+  "Computer Science",
   "Infomation Systems",
   "Infomation Security",
   "Business Analytics"
@@ -89,6 +87,7 @@ class Welcome extends Component {
             <label>Year of enrolment</label>
             <Select
               showSearch
+              key="selectionbar1"
               className="selectionbar1"
               placeholder="Select your admitted year"
               optionFilterProp="children"
@@ -100,7 +99,9 @@ class Welcome extends Component {
               }
             >
               {yearOfEnrolment.map(y => (
-                <Option value={y}>{y}</Option>
+                <Option value={y} key={y}>
+                  {y}
+                </Option>
               ))}
             </Select>
           </div>
@@ -108,6 +109,7 @@ class Welcome extends Component {
             <label>First major</label>
             <Select
               showSearch
+              key="selectionbar2"
               className="selectionbar2"
               placeholder="Select your first major"
               optionFilterProp="children"
@@ -119,12 +121,16 @@ class Welcome extends Component {
               }
             >
               {firstMajor.map(y => (
-                <Option value={y}>{y}</Option>
+                <Option value={y} key={y}>
+                  {y}
+                </Option>
               ))}
             </Select>
           </div>
-          <Button onClick={this.redirectHanlder}>Let's start!</Button>
         </div>
+        <Button className="submit" onClick={this.redirectHanlder}>
+          Let's start!
+        </Button>
       </div>
     );
   }

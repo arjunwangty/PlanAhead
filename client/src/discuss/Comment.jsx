@@ -41,7 +41,7 @@ class Comment extends Component {
           <span style={{ fontStyle: "italic", color: "#9e9e9e" }}>
             {this.showDetails()}
           </span>
-          <p>{comment.comment}</p>
+          <p style={{ fontWeight: "normal" }}>{comment.comment}</p>
         </div>
       </div>
     );

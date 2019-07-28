@@ -3,7 +3,7 @@ import axios from "axios";
 import CommentInput from "./CommentInput";
 import CommentList from "./CommentList";
 import "./discuss.css";
-import { Layout, Menu, Icon } from "antd";
+import { Layout, Menu } from "antd";
 
 const { Content, Sider } = Layout;
 const firstMajor = [

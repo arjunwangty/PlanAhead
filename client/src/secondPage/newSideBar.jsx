@@ -1,71 +1,66 @@
 import React, { Component } from "react";
-import Draggable from "./draggable";
-import Droppable from "./droppable";
-import Mod from "./mod";
+import Draggable from "../component/draggable";
+import Droppable from "../component/droppable";
+import Mod from "../component/mod";
+import storage from "../component/storage";
+import "../style/sidebar.less";
+import { Typography } from "antd";
 
-const wrapperStyle2 = {
-  padding: "2px",
-  display: "inline-block",
-  backgroundColor: "white",
-  border: "1px solid #C8C8C8",
-  borderRadius: "3px",
-  textAlign: "left",
-  width: "100%",
-  height: "200px",
-  overflowX: "scroll"
-};
-
+const { Title } = Typography;
 class NSideBar extends Component {
   constructor(props) {
     super(props);
-    const { adyear, major } = this.props;
-    this.state = {
-      draggables: []
-    };
-    let p = `../data/programmes/${adyear.substring(0, 6)}/${major}.json`;
-    fetch(p)
-      .then(res => res.json())
-      .then(data => {
-        let moduleArray = [];
-        for (var m in data) {
-          moduleArray.push({
-            id: m,
-            code: m,
-            title: data[m]
-          });
-        }
-        this.setState({ draggables: moduleArray });
-      });
+    this.state = { draggables: [] };
+  }
+
+  componentWillMount() {
+    const { adyear, major, init } = this.props;
+    let draggables = [];
+    if (init) {
+      let p = `../data/programmes/${adyear.substring(0, 6)}/${major}.json`;
+      fetch(p)
+        .then(res => res.json())
+        .then(data => {
+          let store = [];
+          for (var m in data) {
+            draggables.push([m, "rgb(84,169,139)", "firstMajor"]);
+            store.push([m, "rgb(84,169,139)", "firstMajor"]);
+          }
+          storage.init(adyear, major, store);
+          this.setState({ draggables: draggables });
+        });
+    } else {
+      let storeSideBar = storage.getYMCol(adyear, major, "SideBarContainer");
+      for (var m of storeSideBar) {
+        draggables.push(m);
+      }
+      this.setState({ draggables: draggables });
+    }
   }
 
   render() {
     return (
-      <div
-        style={{
-          backgroundColor: "rgb(84,169,139)",
-          marginTop: "10px",
-          borderRadius: "4px",
-          width: "270px",
-          height: "300px"
-        }}
-      >
-        <p style={{ color: "white", fontSize: "20px", paddingTop: "5%" }}>
-          First-major modules
-        </p>
-        <Droppable id="SideBar" isDroppable={true} heading="">
-          <div
-            className="list-inline"
-            id="SideBarContainer"
-            style={wrapperStyle2}
-          >
+      <div className="sidebar">
+        <Title className="title">First-major modules</Title>
+        <Droppable id="SideBar" isDroppable={true}>
+          <div id="SideBarContainer">
             {this.state.draggables.map(mod => (
               <Draggable
                 className="list-inline-item"
-                id={`${mod.id}Draggable`}
-                key={mod.id}
-                name="firstMajor"
+                id={`${mod[0]}Draggable`}
+                key={mod[0]}
+                name={mod[2]}
+                adyear={this.props.adyear}
+                major={this.props.major}
+                parent="SideBarContainer"
               >
-                <Mod id={mod.id} code={mod.code} name="firstMajor" />
+                <Mod
+                  id={mod[0]}
+                  key={mod[0]}
+                  code={mod[0]}
+                  name={mod[2]}
+                  color={mod[1]}
+                />
               </Draggable>
             ))}
           </div>

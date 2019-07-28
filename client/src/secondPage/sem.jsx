@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import SemDrop from "./semDrop";
 import PropTypes from "prop-types";
 import { Select } from "antd";
-
+import "../style/sem.less";
 const { Option } = Select;
 
 const wrapperStyle1 = {
@@ -39,13 +39,6 @@ const wrapperStyle3 = {
   width: "100px"
 };
 
-const newStyle = {
-  verticalAlign: "middle",
-  justifyContent: "center",
-  whiteSpace: "normal",
-  backgroundColor: "rgba(0,0,0,0)",
-  height: "90%"
-};
 
 export default class Sem extends Component {
   constructor(props) {
@@ -60,7 +53,10 @@ export default class Sem extends Component {
         [10, "Y3 Vac1"],
         [12, "Y3 Vac3"],
         [14, "Yr4 Vac1"],
-        [16, "Yr4 Vac2"]
+        [16, "Yr4 Vac2"],
+        [17, "Yr5 Sem1"],
+        [18, "Yr5 Vac1"],
+        [19, "Yr5 Sem2"]
       ]
     };
   }
@@ -79,13 +75,13 @@ export default class Sem extends Component {
       wrapperstyle = wrapperStyle3;
     }
 
-    if (this.props.semester === "Semester") {
+    if (this.props.id === "t") {
       return (
         <div className="col-md-1.5" style={wrapperstyle}>
           <p>year</p>
           <Select
             getPopupContainer={triggerNode => triggerNode.parentNode}
-            style={{width: "75px"}}
+            style={{ width: "95px" }}
             showSearch
             className="chooseyear"
             placeholder="Year"
@@ -98,28 +94,18 @@ export default class Sem extends Component {
             }
           >
             {this.state.sem.map(y => (
-              <Option value={y[0].toString()}>{y[1]}</Option>
+              <Option style={{fontSize:"12px"}}value={y[0].toString()}>{y[1]}</Option>
             ))}
           </Select>
-          <button id={`${this.props.id}button`}>0</button>
-          <SemDrop id={this.props.id} isDroppable={false} style={newStyle} />
+          <br></br><br></br>
+          <SemDrop
+            id={this.props.id}
+            isDroppable={false}
+            adyear={this.props.adyear}
+            major={this.props.major}
+          />
           <button
-            className="btn btn-primary"
-            style={{
-              verticalAlign: "middle",
-              height: "5%",
-              width: "99%",
-              color: "rgb(207,231,241)",
-              border: "none",
-              borderRadius: "3px",
-              textAlign: "center",
-              display: "inline-block",
-              fontSize: "15px",
-              margin: "0% 3% 3% 0%",
-              padding: "0px 0px 8px 0px",
-              borderTopLeftRadius: "0px",
-              borderTopRightRadius: "0px"
-            }}
+            className="cross"
             onClick={this.props.onDelete}
             value={this.props.id}
           >
@@ -136,8 +122,13 @@ export default class Sem extends Component {
           <div className="col-md-1.5" style={wrapperstyle}>
             <p className="text-center">{this.props.year}</p>
             <p>{this.props.semester}</p>
-            <button id={`${this.props.id}button`}>0</button>
-            <SemDrop id={this.props.id} style={newStyle} isDroppable={true} />
+            <button id={`${this.props.id}button`}>{this.props.button}</button>
+            <SemDrop
+              id={this.props.id}
+              isDroppable={true}
+              adyear={this.props.adyear}
+              major={this.props.major}
+            />
           </div>
         );
       } else {
@@ -145,30 +136,20 @@ export default class Sem extends Component {
           <div className="col-md-1.5" style={wrapperstyle}>
             <p className="text-center">{this.props.year}</p>
             <p>{this.props.semester}</p>
-            <button id={`${this.props.id}button`}>0</button>
-            <SemDrop id={this.props.id} isDroppable={true} style={newStyle} />
+            <button id={`${this.props.id}button`}>{this.props.button}</button>
+            <SemDrop
+              id={this.props.id}
+              isDroppable={true}
+              adyear={this.props.adyear}
+              major={this.props.major}
+            />
             <button
-              className="btn btn-primary"
-              style={{
-                verticalAlign: "middle",
-                height: "5%",
-                width: "99%",
-                color: "rgb(207,231,241)",
-                border: "none",
-                borderRadius: "3px",
-                textAlign: "center",
-                display: "inline-block",
-                fontSize: "15px",
-                margin: "0% 3% 3% 0%",
-                padding: "0px 0px 8px 0px",
-                borderTopLeftRadius: "0px",
-                borderTopRightRadius: "0px"
-              }}
-              onClick={this.props.onDelete}
-              value={this.props.id}
-            >
-              ×
-            </button>
+            className="cross"
+            onClick={this.props.onDelete}
+            value={this.props.id}
+          >
+            ×
+          </button>
           </div>
         );
       }
@@ -176,24 +157,16 @@ export default class Sem extends Component {
       return (
         <div className="col-md-1.5" style={wrapperstyle}>
           <p className="text-center">{this.props.year}</p>
-          <SemDrop id={this.props.id} isDroppable={true} style={newStyle} />
+          <p>{this.props.semester}</p>
+          <button id={`${this.props.id}button`}>{this.props.button}</button>
+          <SemDrop
+            id={this.props.id}
+            isDroppable={true}
+            adyear={this.props.adyear}
+            major={this.props.major}
+          />
           <button
-            className="btn btn-warning"
-            style={{
-              verticalAlign: "middle",
-              height: "5%",
-              width: "99%",
-              color: "rgb(255, 224, 179)",
-              border: "none",
-              borderRadius: "3px",
-              textAlign: "center",
-              display: "inline-block",
-              fontSize: "15px",
-              margin: "0% 3% 3% 0%",
-              padding: "0px 0px 8px 0px",
-              borderTopLeftRadius: "0px",
-              borderTopRightRadius: "0px"
-            }}
+            className="cross"
             onClick={this.props.onDelete}
             value={this.props.id}
           >

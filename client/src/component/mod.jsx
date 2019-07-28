@@ -1,29 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const style1 = {
-  width: 70,
-  borderWidth: "0px",
-  backgroundColor: "rgb(84,169,139)",
-  color: "white"
-};
-const style2 = {
-  width: 70,
-  borderWidth: "0px",
-  backgroundColor: "rgb(120,206,179)",
-  color: "white"
-};
-
 export default class Mod extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
-    if (this.props.name === "firstMajor") {
-      this.state = { style: style1 };
-    } else {
-      this.state = { style: style2 };
-    }
     this.showInfo = this.showInfo.bind(this);
+    this.state = {};
   }
 
   componentWillMount() {
@@ -35,28 +17,51 @@ export default class Mod extends React.Component {
           moduleTitle,
           moduleCredit,
           prerequisite,
-          moduleDescription
+          moduleDescription,
+          parsedPrerequisite
         } = data;
+        let p = parsedPrerequisite;
+        if (parsedPrerequisite === "nil") {
+          p = JSON.stringify({});
+        } else {
+          p = JSON.stringify(parsedPrerequisite);
+        }
+        const style = {
+          width: "100%",
+          height: "100%",
+          borderWidth: "0px",
+          borderRadius: "4px",
+          margin: "0",
+          backgroundColor: this.props.color,
+          color: "white",
+          textAlign: "center",
+          fontSize: "13px"
+        };
         this.setState({
           code: this.props.id,
           title: moduleTitle,
           mc: moduleCredit,
           pre: prerequisite,
-          info: moduleDescription
+          info: moduleDescription,
+          parsedpre: p,
+          style: style
         });
       });
   }
 
   render() {
+    const { code, title, mc, style, parsedpre } = this.state;
     return (
       <button
-        id={this.props.id}
-        key={this.props.code}
-        title={this.props.title}
-        mc={this.state.mc}
+        id={code}
+        key={code}
+        title={title}
+        mc={mc}
         className="btn btn-sm"
-        style={this.state.style}
+        style={style}
         onClick={this.showInfo}
+        parsedpre={parsedpre}
+        name={this.props.name}
       >
         {this.props.code}
       </button>

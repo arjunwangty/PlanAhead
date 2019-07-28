@@ -8,11 +8,8 @@ const allModule = {
 };
 export default function test(a, b) {
   if (!(a in allModule)) {
-      console.log("adyear not in");
     return false;
-  } else if (allModule[a].findIndex(x=>(x===b))<0) {
-      console.log("major not in");
-      console.log(allModule[a]);
+  } else if (allModule[a].findIndex(x => x === b) < 0) {
     return false;
   }
   return true;

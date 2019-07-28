@@ -1,27 +1,24 @@
 import React, { Component } from "react";
-import Droppable from "./droppable";
-import Draggable from "./draggable";
-import Mod from "./mod";
-import { Input } from 'antd';
-
-
-const wrapperStyle2 = {
-  padding: "2px",
-  display: "inline-block",
-  backgroundColor: "white",
-  border: "1px solid #C8C8C8",
-  borderRadius: "3px",
-  textAlign: "left",
-  width: "100%",
-  height: "70px"
-};
+import Droppable from "../component/droppable";
+import Draggable from "../component/draggable";
+import Mod from "../component/mod";
+import { Input, Button } from "antd";
+import storage from "../component/storage";
+import "../style/searchbar.less";
 
 class SearchBar extends Component {
   constructor(props) {
     super(props);
+    const { adyear, major } = this.props;
+    let searchbar = storage.getYMCol(adyear, major, "SearchBarContainer");
+    let exist = [];
+    for (let i of searchbar) {
+      exist.push(i);
+    }
     this.state = {
       inputValue: "",
-      draggables: []
+      draggables: exist,
+      click:0
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleBtnClick = this.handleBtnClick.bind(this);
@@ -29,8 +26,8 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <div style={{ paddingTop: "10px", color: "white" }}>
+      <div className="searchbar">
+        <div className="input">
           <Input
             placeholder="Search for a module"
             id="insertion"
@@ -38,45 +35,37 @@ class SearchBar extends Component {
             onChange={this.handleInputChange}
             autoComplete="off"
           />
-          <button
-            className="btn btn-info btn-sm"
-            style={{
-              marginLeft: "8px",
-              fontSize: "13px"
-            }}
-            onClick={this.handleBtnClick}
-          >
-            Go
-          </button>
+          <Button onClick={this.handleBtnClick}>Go</Button>
         </div>
         <div>
           <Droppable id="SearchBar" isDroppable={true}>
-            <div
-              id="SearchBarContainer"
-              className="container pre-scrollable list-inline"
-              style={wrapperStyle2}
-            >
+            <div id="SearchBarContainer">
               {this.state.draggables.map(mod => (
-                <Draggable className="list-inline-item" id={`${mod.id}Draggable`} name="additional">
+                <Draggable
+                  className="list-inline-item"
+                  parent="SearchBarContainer"
+                  id={`${mod[0]}Draggable`}
+                  key={`${mod[0]}Draggable`}
+                  name={mod[2]}
+                  adyear={this.props.adyear}
+                  major={this.props.major}
+                >
                   <Mod
-                    id={mod.id}
-                    code={mod.code}
-                    title={mod.title}
-                    name="additional"
+                    id={mod[0]}
+                    key={mod[0]}
+                    code={mod[0]}
+                    name={mod[2]}
+                    color={mod[1]}
                   />
                 </Draggable>
               ))}
             </div>
           </Droppable>
         </div>
-        <Droppable id="dustDroppable" style={{height:'30px', backgroundColor:'red'}} isDroppable={true}>
-          <div id='dust'>
-            delete
-          </div>
-        </Droppable>
-      </React.Fragment>
+      </div>
     );
   }
+
 
   handleInputChange(e) {
     const value = e.target.value;
@@ -87,35 +76,29 @@ class SearchBar extends Component {
 
   handleBtnClick() {
     const inputcode = this.state.inputValue.toUpperCase();
-    let allModules = document.getElementsByTagName('button');
-    for (let i = 0; i<allModules.length; i++){
-      if (allModules[i].getAttribute('id')===inputcode){
+    let allModules = document.getElementsByTagName("button");
+    for (let i = 0; i < allModules.length; i++) {
+      if (allModules[i].getAttribute("id") === inputcode) {
         alert(`${inputcode} already exists!`);
-        this.setState({inputValue: ""});
+        this.setState({ inputValue: ""});
         return;
       }
     }
-    fetch("http://api.nusmods.com/2018-2019/1/moduleList.json")
+    fetch("../data/modules/MENU/allmods.json")
       .then(res => res.json())
       .then(data => {
         if (inputcode in data) {
-          this.setState(prevState => ({
-            draggables: [
-              ...prevState.draggables,
-              {
-                id: inputcode,
-                code: inputcode,
-                title: data[inputcode]
-              }
-            ],
-            inputValue: ""
-          }));
+          const { adyear, major } = this.props;
+          storage.addNewMod(adyear, major, inputcode);
+          let {draggables, click} = this.state;
+          click++;
+          draggables.push([inputcode, "rgb(120,206,179)", "additional"]);
+          this.setState({ inputValue: "", draggables: draggables, click: click });
         } else {
           alert(inputcode + " is invalid");
         }
       });
   }
-
 }
 
 export default SearchBar;

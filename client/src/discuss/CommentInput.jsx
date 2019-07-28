@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Input, Col, Row, Select } from "antd";
+import { Input, Select } from "antd";
 import { Button } from "antd";
 
 const { TextArea } = Input;
