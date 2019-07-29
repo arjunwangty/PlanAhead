@@ -106,6 +106,7 @@ export default class Sem extends Component {
             isDroppable={false}
             adyear={this.props.adyear}
             major={this.props.major}
+            modules={this.props.modules}
           />
           <Button
             className="cross"
@@ -133,6 +134,7 @@ export default class Sem extends Component {
               isDroppable={true}
               adyear={this.props.adyear}
               major={this.props.major}
+              modules={this.props.modules}
             />
           </div>
         );
@@ -149,6 +151,7 @@ export default class Sem extends Component {
               isDroppable={true}
               adyear={this.props.adyear}
               major={this.props.major}
+              modules={this.props.modules}
             />
             <Button
               className="cross"
@@ -173,6 +176,7 @@ export default class Sem extends Component {
             isDroppable={true}
             adyear={this.props.adyear}
             major={this.props.major}
+            modules={this.props.modules}
           />
           <Button
             className="cross"

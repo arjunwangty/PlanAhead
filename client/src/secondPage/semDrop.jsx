@@ -27,8 +27,7 @@ export default class SemDrop extends React.Component {
   };
 
   render() {
-    const { adyear, major } = this.props;
-    let mods = storage.getYM(adyear, major)[this.props.id];
+    const mods=this.props.modules;
     return (
       <div
         id={this.props.id}

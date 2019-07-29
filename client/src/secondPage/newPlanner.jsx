@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Sem from "./sem";
-import { message, Button, Icon } from "antd";
+import { message } from "antd";
 import storage from "../component/storage";
 import "../style/planner.less";
 
@@ -12,14 +12,14 @@ class NPlanner extends Component {
     if (init) {
       this.state = {
         semesters: [
-          ["s1", 0],
-          ["s3", 0],
-          ["s5", 0],
-          ["s7", 0],
-          ["s9", 0],
-          ["s11", 0],
-          ["s13", 0],
-          ["s15", 0]
+          ["s1", 0, []],
+          ["s3", 0, []],
+          ["s5", 0, []],
+          ["s7", 0, []],
+          ["s9", 0, []],
+          ["s11", 0, []],
+          ["s13", 0, []],
+          ["s15", 0, []]
         ]
       };
     } else {
@@ -31,7 +31,7 @@ class NPlanner extends Component {
           list.push([
             "s" + i,
             parseInt(storage.getYMCol(adyear, major, `${"s" + i}button`))
-          ]);
+          , storage.getYMCol(adyear, major, `${"s" + i}`)]);
         }
       }
       this.state = { semesters: list };
@@ -39,6 +39,31 @@ class NPlanner extends Component {
     this.handleAdd = this.handleAdd.bind(this);
     this.handleChoose = this.handleChoose.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.year=this.year.bind(this);
+    this.semester=this.semester.bind(this);
+  }
+  render() {
+    return (
+      <div className="planner">
+        {this.state.semesters.map(sem => (
+          <Sem
+            id={sem[0]}
+            key={sem[0]}
+            year={this.year(sem[0])}
+            semester={this.semester(sem[0])}
+            onChoose={this.handleChoose}
+            onDelete={this.handleDelete}
+            adyear={this.props.adyear}
+            major={this.props.major}
+            button={sem[1]}
+            modules={sem[2]}
+          />
+        ))}
+        <button className="plus" onClick={this.handleAdd}>
+          +
+        </button>
+      </div>
+    );
   }
 
   handleAdd() {
@@ -47,7 +72,7 @@ class NPlanner extends Component {
     if (semesters.filter(s => s[0] === "t").length > 0) {
       return;
     }
-    this.setState(prevState => prevState.semesters.push(["t", 0]));
+    this.setState(prevState => prevState.semesters.push(["t", 0, []]));
     storage.addNewCol(adyear, major, "t");
   }
 
@@ -82,7 +107,7 @@ class NPlanner extends Component {
     }
 
     if (semesters.filter(x => x[0] === "s" + code).length === 0) {
-      semesters.push(["s" + code, 0]);
+      semesters.push(["s" + code, 0, []]);
       storage.addNewCol(adyear, major, "s" + code);
     }
 
@@ -158,41 +183,6 @@ class NPlanner extends Component {
       return "Vacation 2";
     }
   };
-
-  render() {
-    return (
-      <div className="planner">
-        {this.state.semesters.map(sem => (
-          <Sem
-            id={sem[0]}
-            key={sem[0]}
-            year={this.year(sem[0])}
-            semester={this.semester(sem[0])}
-            onChoose={this.handleChoose}
-            onDelete={this.handleDelete}
-            adyear={this.props.adyear}
-            major={this.props.major}
-            button={sem[1]}
-          />
-        ))}
-        <Button
-          className="default"
-          style={{
-            borderRadius: "50%",
-            textAlign: "center",
-            paddingLeft: "12px",
-            paddingTop: "2px",
-            height: "40px",
-            width: "40px",
-            marginLeft: "20px"
-          }}
-          onClick={this.handleAdd}
-        >
-          <Icon type="plus" />
-        </Button>
-      </div>
-    );
-  }
 }
 
 export default NPlanner;
