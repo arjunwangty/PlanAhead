@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Input, Select } from "antd";
+import { Input, Select, Modal } from "antd";
 import { Button } from "antd";
 
 const { TextArea } = Input;
@@ -37,9 +37,25 @@ class CommentInput extends Component {
       username: "",
       comment: "",
       course: "",
-      year: ""
+      year: "",
+      visible: false
     };
   }
+
+  showModal = () => {
+    this.setState({
+      visible: true
+    });
+  };
+
+  handleOk = () => {
+    this.setState({ visible: false });
+    this.handleSubmit();
+  };
+
+  handleCancel = () => {
+    this.setState({ visible: false });
+  };
 
   componentDidMount() {
     this.textarea.focus();
@@ -150,8 +166,27 @@ class CommentInput extends Component {
           </div>
         </div>
         <div className="comment-field-button">
-          <Button onClick={this.handleSubmit.bind(this)}>Submit</Button>
+          <Button onClick={this.showModal.bind(this)}>Submit</Button>
         </div>
+        <Modal
+          visible={this.state.visible}
+          onOk={this.handleOk}
+          onCancel={this.handleCancel}
+          footer={[
+            <Button key="back" onClick={this.handleCancel}>
+              Return
+            </Button>,
+            <Button key="submit" type="primary" onClick={this.handleOk}>
+              Ok
+            </Button>
+          ]}
+        >
+          <br />
+          <p>
+            Once submitted, you will not be able to delete or edit your post.
+            Confirm submission?
+          </p>
+        </Modal>
       </div>
     );
   }

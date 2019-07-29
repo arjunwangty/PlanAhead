@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-import { message, Select, Button, Layout } from "antd";
+import { message, Select, Button, Layout, Modal } from "antd";
 import test from "./test";
 import MyFooter from "../component/myFooter";
 import "../style/welcome.less";
@@ -30,14 +30,31 @@ class Welcome extends Component {
     this.state = {
       redirect: false,
       adyear: "",
-      major: ""
+      major: "",
+      visible: false
     };
     this.redirectHanlder = this.redirectHanlder.bind(this);
     this.setState = this.setState.bind(this);
     this.onChange1 = this.onChange1.bind(this);
     this.onChange2 = this.onChange2.bind(this);
     this.redirectHanlder = this.redirectHanlder.bind(this);
+    this.handleReset = this.handleReset.bind(this);
   }
+
+  showModal = () => {
+    this.setState({
+      visible: true
+    });
+  };
+
+  handleOk = () => {
+    this.setState({ visible: false });
+    this.handleReset();
+  };
+
+  handleCancel = () => {
+    this.setState({ visible: false });
+  };
 
   componentWillMount() {
     this._loadSettings();
@@ -73,6 +90,10 @@ class Welcome extends Component {
     }
   }
 
+  handleReset() {
+    localStorage.clear();
+  }
+
   onChange1(value) {
     let temp = value;
     this.setState({ adyear: temp });
@@ -82,98 +103,6 @@ class Welcome extends Component {
   onChange2(value) {
     this.setState({ major: value });
     localStorage.setItem("major", value);
-  }
-
-  _loadSB1() {
-    if (this.state.adyear === "") {
-      return (
-        <Select
-          showSearch
-          key="selectionbar1"
-          className="selectionbar1"
-          placeholder="Select your year of admission"
-          optionFilterProp="children"
-          onChange={this.onChange1}
-          filterOption={(input, option) =>
-            option.props.children.toLowerCase().indexOf(input.toLowerCase()) >=
-            0
-          }
-        >
-          {yearOfEnrolment.map(y => (
-            <Option value={y} key={y}>
-              {y}
-            </Option>
-          ))}
-        </Select>
-      );
-    } else {
-      return (
-        <Select
-          showSearch
-          key="selectionbar1"
-          className="selectionbar1"
-          optionFilterProp="children"
-          onChange={this.onChange1}
-          defaultValue={this.state.adyear}
-          filterOption={(input, option) =>
-            option.props.children.toLowerCase().indexOf(input.toLowerCase()) >=
-            0
-          }
-        >
-          {yearOfEnrolment.map(y => (
-            <Option value={y} key={y}>
-              {y}
-            </Option>
-          ))}
-        </Select>
-      );
-    }
-  }
-
-  _loadSB2() {
-    if (this.state.major === "") {
-      return (
-        <Select
-          showSearch
-          key="selectionbar2"
-          className="selectionbar2"
-          placeholder="Select your first major"
-          optionFilterProp="children"
-          onChange={this.onChange2}
-          filterOption={(input, option) =>
-            option.props.children.toLowerCase().indexOf(input.toLowerCase()) >=
-            0
-          }
-        >
-          {firstMajor.map(y => (
-            <Option value={y} key={y}>
-              {y}
-            </Option>
-          ))}
-        </Select>
-      );
-    } else {
-      return (
-        <Select
-          showSearch
-          key="selectionbar2"
-          className="selectionbar2"
-          optionFilterProp="children"
-          onChange={this.onChange2}
-          defaultValue={this.state.major}
-          filterOption={(input, option) =>
-            option.props.children.toLowerCase().indexOf(input.toLowerCase()) >=
-            0
-          }
-        >
-          {firstMajor.map(y => (
-            <Option value={y} key={y}>
-              {y}
-            </Option>
-          ))}
-        </Select>
-      );
-    }
   }
 
   render() {
@@ -199,16 +128,74 @@ class Welcome extends Component {
             <div className="selectionbar">
               <div>
                 <label className="lab1">Year of admission</label>
-                {this._loadSB1()}
+                <Select
+                  showSearch
+                  key="selectionbar1"
+                  className="selectionbar1"
+                  optionFilterProp="children"
+                  onChange={this.onChange1}
+                  defaultValue={this.state.adyear}
+                  filterOption={(input, option) =>
+                    option.props.children
+                      .toLowerCase()
+                      .indexOf(input.toLowerCase()) >= 0
+                  }
+                >
+                  {yearOfEnrolment.map(y => (
+                    <Option value={y} key={y}>
+                      {y}
+                    </Option>
+                  ))}
+                </Select>
               </div>
               <div>
                 <label className="lab2">First major</label>
-                {this._loadSB2()}
+                <Select
+                  showSearch
+                  key="selectionbar2"
+                  className="selectionbar2"
+                  optionFilterProp="children"
+                  onChange={this.onChange2}
+                  defaultValue={this.state.major}
+                  filterOption={(input, option) =>
+                    option.props.children
+                      .toLowerCase()
+                      .indexOf(input.toLowerCase()) >= 0
+                  }
+                >
+                  {firstMajor.map(y => (
+                    <Option value={y} key={y}>
+                      {y}
+                    </Option>
+                  ))}
+                </Select>
               </div>
             </div>
             <Button className="submit" onClick={this.redirectHanlder}>
-              Let's start!
+              Start
             </Button>
+            <Button className="submit" onClick={this.showModal}>
+              Reset all
+            </Button>
+            <Modal
+              visible={this.state.visible}
+              onOk={this.handleOk}
+              onCancel={this.handleCancel}
+              footer={[
+                <Button key="back" onClick={this.handleCancel}>
+                  Return
+                </Button>,
+                <Button key="submit" type="primary" onClick={this.handleOk}>
+                  Ok
+                </Button>
+              ]}
+            >
+              <br />
+              <p>
+                This will erase your saved module planner table, are you sure
+                you want to reset the planner?
+              </p>
+            </Modal>
           </div>
         </Content>
         <Footer

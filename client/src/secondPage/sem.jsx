@@ -50,7 +50,7 @@ export default class Sem extends Component {
         [6, "Yr2 Vac1"],
         [8, "Yr2 Vac2"],
         [10, "Yr3 Vac1"],
-        [12, "Yr3 Vac3"],
+        [12, "Yr3 Vac2"],
         [14, "Yr4 Vac1"],
         [16, "Yr4 Vac2"],
         [17, "Yr5 Sem1"],

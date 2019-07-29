@@ -25,7 +25,7 @@ class CommentList extends Component {
             <Comment
               comment={comment}
               key={comment.index}
-              index={comment.index}
+              index={"co" + comment.index}
             />
           ))}
         </div>

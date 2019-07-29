@@ -31,13 +31,11 @@ class CommentApp extends Component {
     if (value === "all") {
       axios.get("/comments").then(res => {
         this.setState({ comments: res.data });
-        console.log(this.state.comments);
       });
     } else {
       axios.get("/comments").then(res => {
         const coms = res.data.filter(x => x.course === value);
         this.setState({ comments: coms });
-        console.log(value);
       });
     }
   }
