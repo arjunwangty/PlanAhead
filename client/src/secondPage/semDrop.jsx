@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import storage from "../component/storage";
 import Draggable from "../component/draggable";
 import Mod from "../component/mod";
 
@@ -27,7 +26,7 @@ export default class SemDrop extends React.Component {
   };
 
   render() {
-    const mods=this.props.modules;
+    const mods = this.props.modules;
     return (
       <div
         id={this.props.id}
