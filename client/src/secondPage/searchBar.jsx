@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Droppable from "../component/droppable";
 import Draggable from "../component/draggable";
 import Mod from "../component/mod";
-import { Input, Button } from "antd";
+import { Input, Button, message } from "antd";
 import storage from "../component/storage";
 import "../style/searchbar.less";
 
@@ -18,7 +18,7 @@ class SearchBar extends Component {
     this.state = {
       inputValue: "",
       draggables: exist,
-      click:0
+      click: 0
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleBtnClick = this.handleBtnClick.bind(this);
@@ -66,7 +66,6 @@ class SearchBar extends Component {
     );
   }
 
-
   handleInputChange(e) {
     const value = e.target.value;
     this.setState(() => ({
@@ -80,7 +79,7 @@ class SearchBar extends Component {
     for (let i = 0; i < allModules.length; i++) {
       if (allModules[i].getAttribute("id") === inputcode) {
         alert(`${inputcode} already exists!`);
-        this.setState({ inputValue: ""});
+        this.setState({ inputValue: "" });
         return;
       }
     }
@@ -90,12 +89,16 @@ class SearchBar extends Component {
         if (inputcode in data) {
           const { adyear, major } = this.props;
           storage.addNewMod(adyear, major, inputcode);
-          let {draggables, click} = this.state;
+          let { draggables, click } = this.state;
           click++;
           draggables.push([inputcode, "rgb(120,206,179)", "additional"]);
-          this.setState({ inputValue: "", draggables: draggables, click: click });
+          this.setState({
+            inputValue: "",
+            draggables: draggables,
+            click: click
+          });
         } else {
-          alert(inputcode + " is invalid");
+          message.warning(inputcode + " is invalid", 5);
         }
       });
   }

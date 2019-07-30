@@ -24,8 +24,8 @@ class CommentList extends Component {
           {this.props.comments.map(comment => (
             <Comment
               comment={comment}
-              key={comment.index}
-              index={"co" + comment.index}
+              key={comment.comment}
+              index={comment.index}
             />
           ))}
         </div>

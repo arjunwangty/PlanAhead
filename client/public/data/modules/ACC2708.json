@@ -1,0 +1,15 @@
+{
+  "moduleCode": "ACC2708",
+  "moduleTitle": "Corporate Accounting & Reporting II",
+  "moduleCredit": "4",
+  "preclusion": "ACC3601",
+  "prerequisite": "ACC2707",
+  "preclusionList": ["ACC3601"],
+  "parsedPrerequisite": {
+    " and ": ["ACC2707"]
+  },
+  "prerequisiteList": ["ACC2707"],
+  "moduleDescription": "The module covers financial accounting at an intermediate level, with special reference to accounting for property, plant & equipment, investment properties, assets held for sale, intangible assets, asset impairment, changes in accounting policies and estimates, post-balance-sheet events, revenue accounting, segment reporting and interim reporting.",
+  "faculty": "SCHOOL OF BUSINESS",
+  "department": "ACCOUNTING"
+}
