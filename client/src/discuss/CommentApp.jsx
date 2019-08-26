@@ -29,11 +29,11 @@ class CommentApp extends Component {
 
   _loadComments(value) {
     if (value === "all") {
-      axios.get("/comments").then(res => {
+      axios.get("comments/list").then(res => {
         this.setState({ comments: res.data });
       });
     } else {
-      axios.get("/comments").then(res => {
+      axios.get("comments/list").then(res => {
         const coms = res.data.filter(x => x.course === value);
         this.setState({ comments: coms });
       });
@@ -45,7 +45,7 @@ class CommentApp extends Component {
     if (!comment.username) return message.warning("Please enter a username");
     if (!comment.comment) return message.warning("Please enter your comment");
     axios
-      .post("/comments", {
+      .post("comments/list", {
         username: comment.username,
         course: comment.course,
         year: comment.year,
@@ -54,8 +54,8 @@ class CommentApp extends Component {
       .then(function(response) {
         console.log(response);
       })
-      .catch(function(error) {
-        console.log(error);
+      .catch(function(err) {
+        console.log(err);
       });
     return message.success(
       "Comment submitted, please reload the page to view your comment "

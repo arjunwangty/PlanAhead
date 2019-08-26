@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import "./discuss.css";
 
 class Comment extends Component {
   static propTypes = {
@@ -27,17 +28,7 @@ class Comment extends Component {
             marginBottom: "10px"
           }}
         >
-          <span
-            style={{
-              fontWeight: "bold",
-              color: "rgb(50, 89, 128)",
-              display: "inline-block",
-              marginRight: "10px",
-              marginBottom: "10px"
-            }}
-          >
-            {comment.username}
-          </span>
+          <span className="name">{comment.username}</span>
           <span style={{ fontStyle: "italic", color: "#9e9e9e" }}>
             {this.showDetails()}
           </span>

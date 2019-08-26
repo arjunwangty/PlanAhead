@@ -16,3 +16,10 @@
   background: rgba(255, 255, 255, 0.2);
   margin: 16px;
 }
+.name {
+  font-weight: bold;
+  color: rgb(50, 89, 128);
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}

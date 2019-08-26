@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Input, Select, Modal } from "antd";
+import Login from "../component/Login";
+import "./discuss.css";
 import { Button } from "antd";
+import jwt_decode from "jwt-decode";
 
 const { TextArea } = Input;
 const { Option } = Select;
@@ -35,6 +38,7 @@ class CommentInput extends Component {
     this.state = {
       id: "",
       username: "",
+      email: "",
       comment: "",
       course: "",
       year: "",
@@ -58,20 +62,18 @@ class CommentInput extends Component {
   };
 
   componentDidMount() {
-    this.textarea.focus();
-  }
-  _saveUsername(username) {
-    localStorage.setItem("username", username);
+    if (localStorage.usertoken === undefined) {
+    } else {
+      const token = localStorage.usertoken;
+      const decoded = jwt_decode(token);
+      console.log(decoded);
+      this.setState({
+        username: decoded.username,
+        email: decoded.email
+      });
+    }
   }
 
-  handleUsernameBlur(event) {
-    this._saveUsername(event.target.value);
-  }
-  handleUsernameChange(event) {
-    this.setState({
-      username: event.target.value
-    });
-  }
   handleCommentChange(event) {
     this.setState({
       comment: event.target.value
@@ -95,100 +97,88 @@ class CommentInput extends Component {
     this.setState({ comment: "" });
   }
 
-  componentWillMount() {
-    this._loadUsername();
-  }
-
-  _loadUsername() {
-    const username = localStorage.getItem("username");
-    if (username) {
-      this.setState({ username });
-    }
-  }
-
   render() {
-    return (
-      <div>
+    if (this.state.username !== "") {
+      console.log(this.state);
+      return (
         <div>
-          <span>Name:</span>
-          <Input
-            style={{ marginTop: "5px", marginBottom: "10px" }}
-            ref={textarea => (this.textarea = textarea)}
-            value={this.state.username}
-            onBlur={this.handleUsernameBlur.bind(this)}
-            onChange={this.handleUsernameChange.bind(this)}
-          />
-        </div>
-        <div>
-          <span>Details:</span>
-          <InputGroup
-            compact
-            style={{ marginTop: "5px", marginBottom: "10px" }}
-          >
-            <Select
-              showSearch
-              style={{ width: "60%" }}
-              placeholder="First major"
-              optionFilterProp="children"
-              onChange={this.handleCourseChange.bind(this)}
-            >
-              {firstMajor.map(y => (
-                <Option key={y} value={y}>
-                  {y}
-                </Option>
-              ))}
-            </Select>
-
-            <Select
-              showSearch
-              style={{ width: "40%" }}
-              placeholder="Year of Admission"
-              optionFilterProp="children"
-              onChange={this.handleYearChange.bind(this)}
-            >
-              {yearOfEnrolment.map(y => (
-                <Option key={y} value={y}>
-                  {y}
-                </Option>
-              ))}
-            </Select>
-          </InputGroup>
-        </div>
-        <div>
-          <span className="comment-field-name">Comment:</span>
-          <div className="comment-field-input">
-            <TextArea
-              style={{ marginTop: "5px", marginBottom: "10px" }}
-              rows={4}
-              value={this.state.comment}
-              onChange={this.handleCommentChange.bind(this)}
-            />
+          <div>
+            <span>Username: </span>
+            <span className="name">{this.state.username}</span>
           </div>
+          <div>
+            <span>Details:</span>
+            <InputGroup
+              compact
+              style={{ marginTop: "5px", marginBottom: "10px" }}
+            >
+              <Select
+                showSearch
+                style={{ width: "60%" }}
+                placeholder="First major"
+                optionFilterProp="children"
+                onChange={this.handleCourseChange.bind(this)}
+              >
+                {firstMajor.map(y => (
+                  <Option key={y} value={y}>
+                    {y}
+                  </Option>
+                ))}
+              </Select>
+
+              <Select
+                showSearch
+                style={{ width: "40%" }}
+                placeholder="Year of Admission"
+                optionFilterProp="children"
+                onChange={this.handleYearChange.bind(this)}
+              >
+                {yearOfEnrolment.map(y => (
+                  <Option key={y} value={y}>
+                    {y}
+                  </Option>
+                ))}
+              </Select>
+            </InputGroup>
+          </div>
+          <div>
+            <span className="comment-field-name">Comment:</span>
+            <div className="comment-field-input">
+              <TextArea
+                style={{ marginTop: "5px", marginBottom: "10px" }}
+                rows={4}
+                value={this.state.comment}
+                onChange={this.handleCommentChange.bind(this)}
+              />
+            </div>
+          </div>
+          <div className="comment-field-button">
+            <Button onClick={this.showModal.bind(this)}>Submit</Button>
+          </div>
+          <Modal
+            visible={this.state.visible}
+            onOk={this.handleOk}
+            onCancel={this.handleCancel}
+            footer={[
+              <Button key="back" onClick={this.handleCancel}>
+                Return
+              </Button>,
+              <Button key="submit" type="primary" onClick={this.handleOk}>
+                Ok
+              </Button>
+            ]}
+          >
+            <br />
+            <p>
+              Once submitted, you will not be able to delete or edit your post.
+              Confirm submission?
+            </p>
+          </Modal>
         </div>
-        <div className="comment-field-button">
-          <Button onClick={this.showModal.bind(this)}>Submit</Button>
-        </div>
-        <Modal
-          visible={this.state.visible}
-          onOk={this.handleOk}
-          onCancel={this.handleCancel}
-          footer={[
-            <Button key="back" onClick={this.handleCancel}>
-              Return
-            </Button>,
-            <Button key="submit" type="primary" onClick={this.handleOk}>
-              Ok
-            </Button>
-          ]}
-        >
-          <br />
-          <p>
-            Once submitted, you will not be able to delete or edit your post.
-            Confirm submission?
-          </p>
-        </Modal>
-      </div>
-    );
+      );
+    } else {
+      return <Login />;
+    }
   }
 }
 

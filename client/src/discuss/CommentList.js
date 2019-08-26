@@ -1,8 +1,22 @@
 import React, { Component } from "react";
+import { Spin } from "antd";
 import Comment from "./Comment";
 import PropTypes from "prop-types";
+import "./discuss.css";
 
 class CommentList extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isLoading: true
+    };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ isLoading: false });
+    }, 2000);
+  }
   static propTypes = {
     comments: PropTypes.array,
     onDeleteComment: PropTypes.func
@@ -19,17 +33,25 @@ class CommentList extends Component {
   };
   render() {
     if (this.props.comments !== null) {
-      return (
-        <div>
-          {this.props.comments.map(comment => (
-            <Comment
-              comment={comment}
-              key={comment.comment}
-              index={comment.index}
-            />
-          ))}
-        </div>
-      );
+      if (this.state.isLoading) {
+        return (
+          <div className="wrapper" style={{ textAlign: "center" }}>
+            <Spin />
+          </div>
+        );
+      } else {
+        return (
+          <div>
+            {this.props.comments.map(comment => (
+              <Comment
+                comment={comment}
+                key={comment.comment}
+                index={comment.index}
+              />
+            ))}
+          </div>
+        );
+      }
     }
   }
 }

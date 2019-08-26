@@ -9,7 +9,7 @@ import {
 import Welcome from "./welcome/welcome";
 import EntirePage from "./secondPage/newPage";
 import CommentApp from "./discuss/CommentApp";
-
+import Register from "./component/Register";
 import { Menu, Icon, Layout } from "antd";
 
 const { Header, Content } = Layout;
@@ -82,6 +82,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Welcome} />
               <Route path="/planner" component={EntirePage} />
+              <Route path="/register" component={Register} />
               <Route path="/discussion" component={CommentApp} />
               <Redirect exact strict push from="/" to="/planner" />
             </Switch>

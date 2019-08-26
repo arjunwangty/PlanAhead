@@ -1,11 +1,25 @@
-const mysql = require("mysql");
+const db = {};
+const Sequelize = require("sequelize");
 
-const db = mysql.createPool({
-  connectionLimit: 10,
-  host: "us-cdbr-iron-east-02.cleardb.net",
-  user: "bceda05831a044",
-  password: "ca6092a7",
-  database: "heroku_029a0b50e9489da"
-});
+const sequelize = new Sequelize(
+  "heroku_029a0b50e9489da",
+  "bceda05831a044",
+  "ca6092a7",
+  {
+    host: "us-cdbr-iron-east-02.cleardb.net",
+    dialect: "mysql",
+    operationAliases: false,
 
-module.exports.pool = db;
+    pool: {
+      max: 5,
+      min: 0,
+      acquire: 30000,
+      idle: 10000
+    }
+  }
+);
+
+db.sequelize = sequelize;
+db.Sequelize = Sequelize;
+
+module.exports = db;
